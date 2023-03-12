@@ -1,0 +1,115 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+:visited {
+  text-decoration: none;
+}
+
+/* Mixins */
+body {
+  background-color: #fff;
+  color: #fff;
+}
+body svg {
+  fill: #fff;
+}
+
+/*  color  */
+nav {
+  background-color: rgb(230, 0, 18);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+nav svg {
+  font-size: 1.5rem;
+}
+nav svg:hover {
+  cursor: pointer;
+}
+nav svg svg {
+  background-color: #fff;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.8rem;
+}
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+nav ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+menu {
+  position: relative;
+  background-color: #BF0010;
+  width: 88px;
+  height: calc(100vh - 70px);
+  font-size: 0.8rem;
+}
+menu :nth-child(9) {
+  height: 55px;
+}
+menu .containerWhite {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+}
+menu li {
+  padding: 5px;
+  width: 100%;
+  background-color: rgb(230, 0, 18);
+  border-top: 1px solid rgb(207, 0, 0);
+  border-right: 1px solid rgb(207, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 88px;
+  position: relative;
+  gap: 5px;
+}
+menu li .corner {
+  fill: rgb(111, 0, 9);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+menu li svg {
+  fill: #fff;
+}
+menu li:hover {
+  background-color: rgb(207, 0, 0);
+}/*# sourceMappingURL=index.css.map */

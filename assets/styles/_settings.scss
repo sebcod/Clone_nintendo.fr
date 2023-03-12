@@ -1,0 +1,46 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+:visited {
+    text-decoration: none;
+}
+
+/* Mixins */
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centerColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    background-color: #fff;
+    color: #fff;
+
+    svg {
+        fill: #fff;
+    }
+}
+
+/*  color  */
+$colorRougeNintendo: rgb(230, 0, 18);
+$colorBorderRougeNintendo: rgb(207, 0, 0);
+$colorCornerRougeNintendo: rgb(111, 0, 9);

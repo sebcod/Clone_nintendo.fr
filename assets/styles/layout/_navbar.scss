@@ -1,0 +1,35 @@
+nav {
+    background-color: $colorRougeNintendo;
+    height: 70px;
+    @include center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    svg {
+        font-size: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        svg {
+            background-color: #fff;
+        }
+    }
+
+    ul {
+        @include center;
+        gap: 20px;
+        font-size: 0.8rem;
+
+        li {
+            @include centerColumn;
+            gap: 5px;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+menu {
+    position: relative;
+    background-color: #BF0010;
+    width: 88px;
+    height: calc(100vh - 70px);
+
+    font-size: 0.8rem;
+
+    & :nth-child(9) {
+        height: 55px;
+    }
+
+    .containerWhite {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translatex(-50%);
+        border-radius: 5px 5px 0 0;
+        @include center;
+        background-color: #fff;
+        width: 30px;
+        height: 30px;
+    }
+
+    li {
+        padding: 5px;
+        width: 100%;
+        background-color: $colorRougeNintendo;
+        border-top: 1px solid $colorBorderRougeNintendo;
+        border-right: 1px solid $colorBorderRougeNintendo;
+        @include centerColumn;
+        height: 88px;
+        position: relative;
+        gap: 5px;
+
+        .corner {
+            fill: $colorCornerRougeNintendo;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        svg {
+            fill: #fff;
+        }
+
+        &:hover {
+            background-color: $colorBorderRougeNintendo;
+        }
+    }
+}
