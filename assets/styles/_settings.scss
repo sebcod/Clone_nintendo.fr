@@ -31,16 +31,28 @@ a,
     text-align: center;
 }
 
-body {
-    background-color: #fff;
-    color: #fff;
 
-    svg {
-        fill: #fff;
-    }
-}
 
 /*  color  */
 $colorRougeNintendo: rgb(230, 0, 18);
 $colorBorderRougeNintendo: rgb(207, 0, 0);
 $colorCornerRougeNintendo: rgb(111, 0, 9);
+
+@font-face {
+    font-family: "font1";
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth/wght.ttf);
+}
+
+$font1: "font1", sans-serif;
+
+body {
+    padding-left: 88px;
+    background-color: #f4f4f4;
+    color: #fff;
+    font-family: $font1;
+    font-size: 11px;
+
+    svg {
+        fill: #fff;
+    }
+}

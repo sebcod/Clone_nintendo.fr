@@ -1,4 +1,9 @@
 nav {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: $colorRougeNintendo;
     height: 70px;
     @include center;
@@ -20,7 +25,7 @@ nav {
     ul {
         @include center;
         gap: 20px;
-        font-size: 0.8rem;
+
 
         li {
             @include centerColumn;
@@ -30,6 +35,10 @@ nav {
                 cursor: pointer;
                 text-decoration: underline;
             }
+
+
         }
+
+
     }
 }

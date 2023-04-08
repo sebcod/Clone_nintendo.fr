@@ -3,11 +3,57 @@ menu {
     background-color: #BF0010;
     width: 88px;
     height: calc(100vh - 70px);
+    position: fixed;
+    left: 0;
+    // visibility: hidden;
 
-    font-size: 0.8rem;
-
-    & :nth-child(9) {
+    > :nth-child(9) {
         height: 55px;
+        font-size: 2rem;
+        padding-bottom: 20px;
+
+    }
+
+    @media screen and (max-height: 860px) {
+        > :nth-child(7) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 770px) {
+        > :nth-child(6) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 685px) {
+        > :nth-child(5) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 595px) {
+        > :nth-child(4) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 508px) {
+        > :nth-child(3) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 420px) {
+        > :nth-child(2) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-height: 330px) {
+        > :nth-child(1) {
+            display: none;
+        }
     }
 
     .containerWhite {

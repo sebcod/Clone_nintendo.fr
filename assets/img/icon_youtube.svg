@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-444.2 246.5 69.4 69.4" style="enable-background:new -444.2 246.5 69.4 69.4;" xml:space="preserve">
+<style type="text/css">
+	.colored_red{fill:url(#redgradient);}
+	.colored_grey{fill:url(#greygradient);}
+	.colored_darkred{fill:#981818;}
+</style>
+<g class="svgicon">
+	<linearGradient id="redgradient" gradientUnits="userSpaceOnUse" x1="-409.5" y1="249.3" x2="-409.5" y2="318.7" gradientTransform="matrix(1 0 0 -1 0 565.2)">
+		<stop  offset="0" style="stop-color:#B31217"/>
+		<stop  offset="1" style="stop-color:#E52D27"/>
+	</linearGradient>
+	<rect x="-444.2" y="246.5" class="colored_red" width="69.4" height="69.4"/>
+	<g>
+		<linearGradient id="greygradient" gradientUnits="userSpaceOnUse" x1="-432.544" y1="284.75" x2="-386.444" y2="284.75" gradientTransform="matrix(1 0 0 -1 0 565.2)">
+			<stop  offset="0" style="stop-color:#F5F5F5"/>
+			<stop  offset="1" style="stop-color:#EDEDED"/>
+		</linearGradient>
+		<path class="colored_grey" d="M-386.9,271.2c0,0-0.5-3.2-1.8-4.6c-1.8-1.9-3.7-1.9-4.6-2c-6.5-0.5-16.1-0.5-16.1-0.5l0,0c0,0-9.7,0-16.1,0.5c-0.9,0.1-2.9,0.1-4.6,2c-1.4,1.4-1.8,4.6-1.8,4.6s-0.5,3.8-0.5,7.5v3.5c0,3.8,0.5,7.5,0.5,7.5s0.4,3.2,1.8,4.6c1.8,1.9,4.1,1.8,5.1,2c3.7,0.4,15.7,0.5,15.7,0.5s9.7,0,16.1-0.5c0.9-0.1,2.9-0.1,4.6-2c1.4-1.4,1.8-4.6,1.8-4.6s0.5-3.8,0.5-7.5v-3.5C-386.4,275-386.9,271.2-386.9,271.2z M-414.3,287v-13.1l12.2,6.4L-414.3,287z"/>
+	</g>
+	<polygon class="colored_darkred" points="-414.3,273.9 -403.5,281.1 -402,280.3 	"/>
+</g>
+</svg>
