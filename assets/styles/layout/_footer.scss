@@ -51,10 +51,37 @@ footer {
 
     }
 
-    .footer {
-        background-color: $colorBorderRougeNintendo;
-        height: 200px;
-        border: 4px solid pink;
+    .footerBanner {
+        margin-left: 5px;
+
     }
 
+    .footerHeader {
+        background-color: #E60012;
+        border-radius: 5px 5px 0 0px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btnFooterHeader {
+            background-color: #BF0010;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    }
+
+    .footerBody {
+        background-color: #BF0010;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &>div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
 }
