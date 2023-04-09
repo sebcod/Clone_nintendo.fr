@@ -349,7 +349,87 @@ footer .footerBody > div {
 
 .rightBlock {
   width: 25%;
-  height: 100px;
-  background-color: pink;
-  border: 4px solid black;
+  height: 100%;
+  margin: 8px;
+}
+.rightBlock .dernieresNews {
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 10px;
+  font-family: "font1", sans-serif;
+  margin-bottom: 5px;
+}
+.rightBlock .dernieresNews .contentDernieresNews {
+  border-left: 5px solid #F4F4F4;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.rightBlock .news {
+  display: flex;
+}
+.rightBlock .news .leftPart {
+  background-color: #FFFFFF;
+  width: 35%;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+.rightBlock .news .leftPart img {
+  width: 100%;
+}
+.rightBlock .news .rightPart {
+  background-color: #FFFFFF;
+  width: 65%;
+  padding: 10px 0px;
+  margin-bottom: 4px;
+  color: #333333;
+}
+.rightBlock .news .rightPart h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #333333;
+}
+.rightBlock .news .rightPart h3 {
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 17px;
+  color: #999999;
+}
+.rightBlock .news .rightPart p {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #666666;
+}
+.rightBlock .plusDeNews {
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  text-align: end;
+  color: #333333;
+  font-family: "font1", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.rightBlock .plusDeNews svg {
+  font-size: 10px;
+  fill: #333333;
+}
+.rightBlock .bientotDisponible {
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 10px;
+  font-family: "font1", sans-serif;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.rightBlock .bientotDisponible .contentBientotDisponible {
+  border-left: 5px solid #F4F4F4;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
 }/*# sourceMappingURL=index.css.map */
