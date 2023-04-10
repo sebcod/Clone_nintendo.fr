@@ -377,6 +377,9 @@ footer .footerBody > div {
 .rightBlock .news .leftPart img {
   width: 100%;
 }
+.rightBlock .news .leftPart:hover {
+  cursor: pointer;
+}
 .rightBlock .news .rightPart {
   background-color: #FFFFFF;
   width: 65%;
@@ -404,6 +407,12 @@ footer .footerBody > div {
   line-height: 20px;
   color: #666666;
 }
+.rightBlock .news .rightPart:hover h2 {
+  text-decoration: underline;
+}
+.rightBlock .news .rightPart:hover {
+  cursor: pointer;
+}
 .rightBlock .plusDeNews {
   background-color: #FFFFFF;
   padding: 10px 20px;
@@ -419,6 +428,10 @@ footer .footerBody > div {
   font-size: 10px;
   fill: #333333;
 }
+.rightBlock .plusDeNews:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .rightBlock .bientotDisponible {
   background-color: #FFFFFF;
   color: #333333;
@@ -432,4 +445,44 @@ footer .footerBody > div {
   padding: 10px;
   font-size: 18px;
   font-weight: 700;
+}
+.rightBlock .voirTousLesJeuxAVenir {
+  color: #E60012;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  background-color: #fff;
+  padding: 10px 20px;
+  text-align: end;
+  text-transform: uppercase;
+}
+.rightBlock .voirTousLesJeuxAVenir:hover {
+  cursor: pointer;
+}
+.rightBlock .sortieRecentes {
+  background-color: #FFFFFF;
+  color: #333333;
+  padding: 10px;
+  font-family: "font1", sans-serif;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.rightBlock .sortieRecentes .contentSortieRecentes {
+  border-left: 5px solid #F4F4F4;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.rightBlock .voirToutesLesNouveautes {
+  color: #E60012;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  background-color: #fff;
+  padding: 10px 20px;
+  text-align: end;
+  text-transform: uppercase;
+}
+.rightBlock .voirToutesLesNouveautes:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
