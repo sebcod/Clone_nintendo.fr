@@ -2,4 +2,10 @@ main {
     margin-top: 70px;
     display: flex;
 
+
+    @media screen and (max-width: 960px) {
+        display: block;
+        padding: 5px;
+    }
+
 }

@@ -58,4 +58,9 @@ body {
     svg {
         fill: #fff;
     }
+
+    @media screen and (max-width: 960px) {
+        padding: 0;
+        margin: 0;
+    }
 }

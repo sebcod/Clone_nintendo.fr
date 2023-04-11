@@ -32,6 +32,12 @@ body {
 body svg {
   fill: #fff;
 }
+@media screen and (max-width: 960px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+}
 
 nav {
   position: fixed;
@@ -78,6 +84,12 @@ nav ul li:hover {
 main {
   margin-top: 70px;
   display: flex;
+}
+@media screen and (max-width: 960px) {
+  main {
+    display: block;
+    padding: 5px;
+  }
 }
 
 menu {
@@ -167,6 +179,11 @@ menu li svg {
 }
 menu li:hover {
   background-color: rgb(207, 0, 0);
+}
+@media screen and (max-width: 960px) {
+  menu {
+    display: none;
+  }
 }
 
 .centralBlock {
@@ -276,6 +293,18 @@ menu li:hover {
 .centralBlock .div16 {
   grid-area: 8/2/9/4;
 }
+@media screen and (max-width: 1600px) {
+  .centralBlock {
+    width: 67%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .centralBlock {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
 
 footer {
   width: 75%;
@@ -318,8 +347,18 @@ footer .partager .ButtonTwitter {
   background-color: #55ACEE;
   margin-right: auto;
 }
+@media screen and (max-width: 960px) {
+  footer .partager {
+    margin: 20px 0px 20px 0px;
+  }
+}
 footer .footerBanner {
   margin-left: 5px;
+}
+@media screen and (max-width: 960px) {
+  footer .footerBanner {
+    margin: 0;
+  }
 }
 footer .footerHeader {
   background-color: #E60012;
@@ -345,6 +384,13 @@ footer .footerBody > div {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+@media screen and (max-width: 960px) {
+  footer {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+  }
 }
 
 .rightBlock {
@@ -485,4 +531,16 @@ footer .footerBody > div {
 }
 .rightBlock .voirToutesLesNouveautes:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 1600px) {
+  .rightBlock {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .rightBlock {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }/*# sourceMappingURL=index.css.map */

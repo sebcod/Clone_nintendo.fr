@@ -94,4 +94,8 @@ menu {
             background-color: $colorBorderRougeNintendo;
         }
     }
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
 }
