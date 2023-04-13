@@ -191,107 +191,136 @@ menu li:hover {
   margin-top: 8px;
   margin-left: 6px;
 }
-.centralBlock .parent {
+.centralBlock .gridPicture1 {
+  border: 1px solid purple;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 4px;
   grid-row-gap: 4px;
 }
-.centralBlock .parent img {
+.centralBlock .gridPicture1 img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
 }
-.centralBlock .parent .caption {
+.centralBlock .gridPicture1 .caption {
   border-radius: 0 0 5px 5px;
   background-color: rgba(0, 0, 0, 0.6235294118);
   padding: 10px;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-.centralBlock .parent > div {
+.centralBlock .gridPicture1 > div {
   border-radius: 5px;
 }
-.centralBlock .parent > div:hover {
+.centralBlock .gridPicture1 > div:hover {
   transition: ease 0.3s;
   transform: translateY(-8px);
   box-shadow: 0px 8px 10px gray;
 }
-.centralBlock .div1 {
+.centralBlock .gridPicture1 .div1 {
   grid-area: 1/1/2/2;
 }
-.centralBlock .div2 {
+.centralBlock .gridPicture1 .div2 {
   grid-area: 1/2/2/3;
   position: relative;
 }
-.centralBlock .div2 img {
+.centralBlock .gridPicture1 .div2 img {
   position: absolute;
 }
-.centralBlock .div2 .caption {
+.centralBlock .gridPicture1 .div2 .caption {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-.centralBlock .div3 {
+.centralBlock .gridPicture1 .div3 {
   grid-area: 1/3/3/4;
 }
-.centralBlock .div4 {
+.centralBlock .gridPicture1 .div4 {
   grid-area: 2/1/3/3;
   position: relative;
 }
-.centralBlock .div4 img {
+.centralBlock .gridPicture1 .div4 img {
   position: absolute;
 }
-.centralBlock .div4 .caption {
+.centralBlock .gridPicture1 .div4 .caption {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-.centralBlock .div5 {
+.centralBlock .gridPicture1 .div5 {
   grid-area: 3/1/5/2;
 }
-.centralBlock .div6 {
+.centralBlock .gridPicture1 .div6 {
   grid-area: 3/2/4/3;
 }
-.centralBlock .div7 {
+.centralBlock .gridPicture1 .div7 {
   grid-area: 3/3/4/4;
 }
-.centralBlock .div8 {
+.centralBlock .gridPicture1 .div8 {
   grid-area: 4/2/5/4;
 }
-.centralBlock .div9 {
-  grid-area: 5/1/6/2;
+.centralBlock .gridPicture2 {
+  border: 1px solid blue;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
 }
-.centralBlock .div10 {
-  grid-area: 5/2/6/3;
+.centralBlock .gridPicture2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.centralBlock .gridPicture2 .caption {
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(0, 0, 0, 0.6235294118);
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.centralBlock .gridPicture2 > div {
+  border-radius: 5px;
+}
+.centralBlock .gridPicture2 > div:hover {
+  transition: ease 0.3s;
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 10px gray;
+}
+.centralBlock .gridPicture2 .div9 {
+  grid-area: 1/1/2/2;
+}
+.centralBlock .gridPicture2 .div10 {
+  grid-area: 1/2/2/3;
   position: relative;
 }
-.centralBlock .div10 img {
+.centralBlock .gridPicture2 .div10 img {
   position: absolute;
 }
-.centralBlock .div10 .caption {
+.centralBlock .gridPicture2 .div10 .caption {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-.centralBlock .div11 {
-  grid-area: 5/3/7/4;
+.centralBlock .gridPicture2 .div11 {
+  grid-area: 1/3/3/4;
 }
-.centralBlock .div12 {
-  grid-area: 6/1/7/3;
+.centralBlock .gridPicture2 .div12 {
+  grid-area: 2/1/3/3;
 }
-.centralBlock .div13 {
-  grid-area: 7/1/9/2;
+.centralBlock .gridPicture2 .div13 {
+  grid-area: 3/1/5/2;
 }
-.centralBlock .div14 {
-  grid-area: 7/2/8/3;
+.centralBlock .gridPicture2 .div14 {
+  grid-area: 3/2/4/3;
 }
-.centralBlock .div15 {
-  grid-area: 7/3/8/4;
+.centralBlock .gridPicture2 .div15 {
+  grid-area: 3/3/4/4;
 }
-.centralBlock .div16 {
-  grid-area: 8/2/9/4;
+.centralBlock .gridPicture2 .div16 {
+  grid-area: 4/2/5/4;
 }
 @media screen and (max-width: 1600px) {
   .centralBlock {
@@ -398,14 +427,17 @@ footer .footerBody > div {
   height: 100%;
   margin: 8px;
 }
-.rightBlock .dernieresNews {
+.rightBlock .dernieresNewsContainer {
+  border: 1px solid green;
+}
+.rightBlock .dernieresNewsContainer .dernieresNews {
   background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
   font-family: "font1", sans-serif;
   margin-bottom: 5px;
 }
-.rightBlock .dernieresNews .contentDernieresNews {
+.rightBlock .dernieresNewsContainer .dernieresNews .contentDernieresNews {
   border-left: 5px solid #F4F4F4;
   padding: 10px;
   font-size: 18px;

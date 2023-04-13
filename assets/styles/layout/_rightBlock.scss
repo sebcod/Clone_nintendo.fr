@@ -4,20 +4,27 @@
     height: 100%;
     margin: 8px;
 
-    .dernieresNews {
-        background-color: #FFFFFF;
-        color: $colorTextGris;
-        padding: 10px;
-        font-family: $font1;
-        margin-bottom: 5px;
+    .dernieresNewsContainer {
 
-        .contentDernieresNews {
-            border-left: 5px solid #F4F4F4;
+        border: 1px solid green;
+
+        .dernieresNews {
+            background-color: #FFFFFF;
+            color: $colorTextGris;
             padding: 10px;
-            font-size: 18px;
-            font-weight: 700;
+            font-family: $font1;
+            margin-bottom: 5px;
+
+            .contentDernieresNews {
+                border-left: 5px solid #F4F4F4;
+                padding: 10px;
+                font-size: 18px;
+                font-weight: 700;
+            }
         }
     }
+
+
 
     .news {
         display: flex;
