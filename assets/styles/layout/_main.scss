@@ -1,9 +1,10 @@
 main {
     margin-top: 70px;
+    margin-left: 90px;
 
     @media screen and (max-width: 960px) {
         display: grid;
-        padding: 5px;
+        padding: 5px 0 0 3px;
 
         .gridPicture1 {
             order: 1;
@@ -13,9 +14,8 @@ main {
             order: 3;
         }
 
-        .blockNews {
+        .dernieresNewsBlock {
             order: 2;
-            border: 2px solid green;
         }
 
         .bientotDisponibleContainer {

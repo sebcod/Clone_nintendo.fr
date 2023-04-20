@@ -83,11 +83,12 @@ nav ul li:hover {
 
 main {
   margin-top: 70px;
+  margin-left: 90px;
 }
 @media screen and (max-width: 960px) {
   main {
     display: grid;
-    padding: 5px;
+    padding: 5px 0 0 3px;
   }
   main .gridPicture1 {
     order: 1;
@@ -95,9 +96,8 @@ main {
   main .gridPicture2 {
     order: 3;
   }
-  main .blockNews {
+  main .dernieresNewsBlock {
     order: 2;
-    border: 2px solid green;
   }
   main .bientotDisponibleContainer {
     order: 5;
@@ -195,12 +195,6 @@ menu li svg {
 menu li:hover {
   background-color: rgb(207, 0, 0);
 }
-@media screen and (max-width: 960px) {
-  menu {
-    display: none;
-  }
-}
-
 .gridPicture1 {
   border: 1px solid purple;
   display: grid;
@@ -359,79 +353,94 @@ menu li:hover {
 }
 
 @media screen and (max-width: 1600px) {
-  .blockNews {
+  .dernieresNewsBlock {
     width: 33%;
   }
 }
 @media screen and (max-width: 960px) {
-  .blockNews {
+  .dernieresNewsBlock {
     width: 100%;
     padding: 0;
     margin: 0;
   }
 }
-.blockNews .blockNewsHeader {
+.dernieresNewsBlock .dernieresNewsHeader {
   background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
   font-family: "font1", sans-serif;
   margin-bottom: 5px;
 }
-.blockNews .blockNewsHeader .dernieresNewsHeaderContent {
+.dernieresNewsBlock .dernieresNewsHeader .dernieresNewsHeaderContent {
   border-left: 5px solid #F4F4F4;
   padding: 10px;
   font-size: 18px;
   font-weight: 700;
 }
-.blockNews .dernieresNews {
+@media screen and (max-width: 960px) {
+  .dernieresNewsBlock .dernieresNewsbody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+  }
+}
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) {
+  border: 2px solid red;
+}
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews {
   display: flex;
 }
-.blockNews .dernieresNews .leftPart {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .leftPart {
   background-color: #FFFFFF;
   width: 35%;
   padding: 10px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.blockNews .dernieresNews .leftPart img {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .leftPart img {
   width: 100%;
 }
-.blockNews .dernieresNews .leftPart:hover {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .leftPart:hover {
   cursor: pointer;
 }
-.blockNews .dernieresNews .rightPart {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart {
   background-color: #FFFFFF;
   width: 65%;
   padding: 10px 0px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   color: #333333;
 }
-.blockNews .dernieresNews .rightPart h2 {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart h2 {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #333333;
 }
-.blockNews .dernieresNews .rightPart h3 {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart h3 {
   margin-top: 5px;
   font-weight: 300;
   font-size: 11px;
   line-height: 17px;
   color: #999999;
 }
-.blockNews .dernieresNews .rightPart p {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart p {
   margin-top: 10px;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
   color: #666666;
 }
-.blockNews .dernieresNews .rightPart:hover h2 {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart:hover h2 {
   text-decoration: underline;
 }
-.blockNews .dernieresNews .rightPart:hover {
+.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart:hover {
   cursor: pointer;
 }
-.blockNews .plusDeNews {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(n+6) {
+  display: none;
+}
+.dernieresNewsBlock .dernieresNewsFooter {
   background-color: #FFFFFF;
   padding: 10px 20px;
   text-align: end;
@@ -442,21 +451,13 @@ menu li:hover {
   line-height: 21px;
   text-transform: uppercase;
 }
-.blockNews .plusDeNews svg {
+.dernieresNewsBlock .dernieresNewsFooter svg {
   font-size: 10px;
   fill: #333333;
 }
-.blockNews .plusDeNews:hover {
+.dernieresNewsBlock .dernieresNewsFooter:hover {
   cursor: pointer;
   text-decoration: underline;
-}
-@media screen and (max-width: 960px) {
-  .blockNews .containerBlock {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0;
-    margin: 0;
-  }
 }
 
 .news .leftPart {
@@ -469,39 +470,6 @@ menu li:hover {
   width: 100%;
 }
 .news .leftPart:hover {
-  cursor: pointer;
-}
-.news .rightPart {
-  background-color: #FFFFFF;
-  width: 65%;
-  padding: 10px 0px;
-  margin-bottom: 4px;
-  color: #333333;
-}
-.news .rightPart h2 {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  color: #333333;
-}
-.news .rightPart h3 {
-  margin-top: 5px;
-  font-weight: 300;
-  font-size: 11px;
-  line-height: 17px;
-  color: #999999;
-}
-.news .rightPart p {
-  margin-top: 10px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: #666666;
-}
-.news .rightPart:hover h2 {
-  text-decoration: underline;
-}
-.news .rightPart:hover {
   cursor: pointer;
 }
 
