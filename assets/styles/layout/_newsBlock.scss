@@ -7,6 +7,80 @@
         width: 100%;
         padding: 0;
         margin: 0;
+
+        .dernieresNewsbody {
+            @media screen and (max-width: 960px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4px;
+                padding: 0;
+                margin: 0;
+
+                &>:nth-child(-n+5) {
+                    display: flex;
+
+                    .leftPart {
+                        background-color: #FFFFFF;
+                        width: 35%;
+                        padding: 10px;
+                        margin-bottom: 2px;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .rightPart {
+                        background-color: #FFFFFF;
+                        width: 65%;
+                        padding: 10px 0px;
+                        margin-bottom: 2px;
+                        color: $colorTextGris;
+
+                        h2 {
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 18px;
+                            color: #333333;
+                        }
+
+                        h3 {
+                            margin-top: 5px;
+                            font-weight: 300;
+                            font-size: 11px;
+                            line-height: 17px;
+                            color: #999999;
+                        }
+
+                        p {
+                            margin-top: 10px;
+                            font-weight: 400;
+                            font-size: 13px;
+                            line-height: 20px;
+                            color: #666666;
+
+                        }
+
+                        &:hover h2 {
+                            text-decoration: underline;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+
+            &>:nth-child(n+6) {
+                display: none;
+            }
+        }
     }
 
     .dernieresNewsHeader {
@@ -24,78 +98,7 @@
         }
     }
 
-    .dernieresNewsbody {
-        @media screen and (max-width: 960px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4px;
-            padding: 0;
-            margin: 0;
-        }
 
-        &>:nth-child(-n+5) {
-            display: flex;
-
-            .leftPart {
-                background-color: #FFFFFF;
-                width: 35%;
-                padding: 10px;
-                margin-bottom: 2px;
-
-                img {
-                    width: 100%;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-
-            .rightPart {
-                background-color: #FFFFFF;
-                width: 65%;
-                padding: 10px 0px;
-                margin-bottom: 2px;
-                color: $colorTextGris;
-
-                h2 {
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 18px;
-                    color: #333333;
-                }
-
-                h3 {
-                    margin-top: 5px;
-                    font-weight: 300;
-                    font-size: 11px;
-                    line-height: 17px;
-                    color: #999999;
-                }
-
-                p {
-                    margin-top: 10px;
-                    font-weight: 400;
-                    font-size: 13px;
-                    line-height: 20px;
-                    color: #666666;
-
-                }
-
-                &:hover h2 {
-                    text-decoration: underline;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        &>:nth-child(n+6) {
-            display: none;
-        }
-    }
 
     .dernieresNewsFooter {
         background-color: #FFFFFF;
