@@ -387,54 +387,51 @@ menu li:hover {
   }
 }
 .dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) {
-  border: 2px solid red;
-}
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews {
   display: flex;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .leftPart {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .leftPart {
   background-color: #FFFFFF;
   width: 35%;
   padding: 10px;
   margin-bottom: 2px;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .leftPart img {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .leftPart img {
   width: 100%;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .leftPart:hover {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .leftPart:hover {
   cursor: pointer;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .rightPart {
   background-color: #FFFFFF;
   width: 65%;
   padding: 10px 0px;
   margin-bottom: 2px;
   color: #333333;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart h2 {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .rightPart h2 {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #333333;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart h3 {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .rightPart h3 {
   margin-top: 5px;
   font-weight: 300;
   font-size: 11px;
   line-height: 17px;
   color: #999999;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart p {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .rightPart p {
   margin-top: 10px;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
   color: #666666;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart:hover h2 {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .rightPart:hover h2 {
   text-decoration: underline;
 }
-.dernieresNewsBlock .dernieresNewsbody .dernieresNews .rightPart:hover {
+.dernieresNewsBlock .dernieresNewsbody > :nth-child(-n+5) .rightPart:hover {
   cursor: pointer;
 }
 .dernieresNewsBlock .dernieresNewsbody > :nth-child(n+6) {
@@ -458,19 +455,6 @@ menu li:hover {
 .dernieresNewsBlock .dernieresNewsFooter:hover {
   cursor: pointer;
   text-decoration: underline;
-}
-
-.news .leftPart {
-  background-color: #FFFFFF;
-  width: 35%;
-  padding: 10px;
-  margin-bottom: 4px;
-}
-.news .leftPart img {
-  width: 100%;
-}
-.news .leftPart:hover {
-  cursor: pointer;
 }
 
 footer {

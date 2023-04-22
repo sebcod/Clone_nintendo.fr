@@ -25,10 +25,6 @@
     }
 
     .dernieresNewsbody {
-
-
-
-
         @media screen and (max-width: 960px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -38,14 +34,6 @@
         }
 
         &>:nth-child(-n+5) {
-            border: 2px solid red;
-
-
-
-        }
-
-        .dernieresNews {
-
             display: flex;
 
             .leftPart {
@@ -107,7 +95,6 @@
         &>:nth-child(n+6) {
             display: none;
         }
-
     }
 
     .dernieresNewsFooter {
@@ -129,24 +116,6 @@
         &:hover {
             cursor: pointer;
             text-decoration: underline;
-        }
-    }
-}
-
-.news {
-
-    .leftPart {
-        background-color: #FFFFFF;
-        width: 35%;
-        padding: 10px;
-        margin-bottom: 4px;
-
-        img {
-            width: 100%;
-        }
-
-        &:hover {
-            cursor: pointer;
         }
     }
 }
