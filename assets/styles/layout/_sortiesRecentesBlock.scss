@@ -1,4 +1,4 @@
-.bientotDisponibleBlock {
+.sortiesRecentesBlock {
 
     @media screen and (max-width: 1600px) {
         width: 67%;
@@ -8,7 +8,7 @@
         width: 100%;
         padding-right: 5px;
 
-        .bientotDisponibleHeader {
+        .sortiesRecentesHeader {
             background-color: #FFFFFF;
             color: $colorTextGris;
             padding: 10px;
@@ -16,7 +16,7 @@
             margin-bottom: 5px;
             margin-top: 10px;
 
-            .bientotDisponibleHeaderContent {
+            .sortiesRecentesHeaderContent {
                 border-left: 5px solid #F4F4F4;
                 padding: 10px;
                 font-size: 18px;
@@ -24,8 +24,8 @@
             }
         }
 
-        .bientotDisponibleBody {
-            .bientotDisponibleCard {
+        .sortiesRecentesbody {
+            .sortiesRecentesCard {
                 display: flex;
 
                 .leftPart {
@@ -88,7 +88,7 @@
 
         }
 
-        .bientotDisponibleFooter {
+        .sortiesRecentesFooter {
             color: #E60012;
             font-size: 14px;
             font-weight: 600;

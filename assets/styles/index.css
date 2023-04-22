@@ -102,7 +102,7 @@ main {
   main .bientotDisponibleBlock {
     order: 5;
   }
-  main .sortieRecentesContainer {
+  main .sortiesRecentesBlock {
     order: 6;
   }
 }
@@ -537,7 +537,7 @@ menu li:hover {
     margin-bottom: 5px;
     margin-top: 10px;
   }
-  .bientotDisponibleBlock .bientotDisponibleHeader .contentBientotDisponibleHeaderContent {
+  .bientotDisponibleBlock .bientotDisponibleHeader .bientotDisponibleHeaderContent {
     border-left: 5px solid #F4F4F4;
     padding: 10px;
     font-size: 18px;
@@ -603,6 +603,94 @@ menu li:hover {
     text-transform: uppercase;
   }
   .bientotDisponibleBlock .bientotDisponibleFooter:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .sortiesRecentesBlock {
+    width: 67%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .sortiesRecentesBlock {
+    width: 100%;
+    padding-right: 5px;
+  }
+  .sortiesRecentesBlock .sortiesRecentesHeader {
+    background-color: #FFFFFF;
+    color: #333333;
+    padding: 10px;
+    font-family: "font1", sans-serif;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  .sortiesRecentesBlock .sortiesRecentesHeader .sortiesRecentesHeaderContent {
+    border-left: 5px solid #F4F4F4;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard {
+    display: flex;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .leftPart {
+    padding: 5px;
+    background-color: #FFFFFF;
+    width: 20%;
+    margin-bottom: 4px;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .leftPart img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .leftPart:hover {
+    cursor: pointer;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart {
+    background-color: #FFFFFF;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 4px;
+    color: #333333;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #333333;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart h3 {
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 17px;
+    color: #999999;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart p {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #666666;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart:hover h2 {
+    text-decoration: underline;
+  }
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart:hover {
+    cursor: pointer;
+  }
+  .sortiesRecentesBlock .sortiesRecentesFooter {
+    color: #E60012;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    background-color: #fff;
+    padding: 10px 20px;
+    text-align: end;
+    text-transform: uppercase;
+  }
+  .sortiesRecentesBlock .sortiesRecentesFooter:hover {
     cursor: pointer;
   }
 }
@@ -692,10 +780,6 @@ footer .footerBody > div {
     padding: 5px;
     margin: 0;
   }
-}
-
-.sortieRecentesContainer {
-  border: 1px solid royalblue;
 }
 
 .sortieRecentes {
