@@ -1,6 +1,4 @@
 .gridPicture2 {
-    border: 1px solid blue;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -61,7 +59,7 @@
     }
 
     .div13 {
-        grid-area: 3 / 1 / 5 / 2;
+        grid-area: 3 / 1 / 4 / 2;
     }
 
     .div14 {
