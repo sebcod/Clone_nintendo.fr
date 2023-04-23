@@ -10,6 +10,152 @@ nav {
     justify-content: space-between;
     padding: 0 20px;
 
+    @media screen and (max-width: 767px) {
+
+        .menuBurger {
+            position: relative;
+            width: 25px;
+            height: 45px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+
+            .bar {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #F9BFC4;
+
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #F9BFC4;
+                }
+
+                &::before {
+                    transform: translateY(-7px);
+                }
+
+                &::after {
+                    transform: translateY(7px);
+                }
+            }
+        }
+
+        .aciveMenuBurger {
+            .bar {
+                @keyframes activeBefore {
+                    0% {
+                        transform: translateY(-7px);
+                    }
+
+                    50% {
+                        transform: translateY(0px);
+                    }
+
+                    100% {
+                        transform: rotate(45deg);
+                    }
+                }
+
+                @keyframes activeAfter {
+                    0% {
+                        transform: translateY(7px);
+                    }
+
+                    50% {
+                        transform: translateY(0px);
+                    }
+
+                    100% {
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                background-color: transparent;
+                transition: background-color 0.5s ease-in;
+
+                &::after {
+                    border: none;
+                    animation-name: activeAfter;
+                    animation-duration: 0.8s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                &::before {
+                    border: none;
+                    animation-name: activeBefore;
+                    animation-duration: 0.8s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+
+        .disableMenuBurger {
+            .bar {
+                @keyframes disableBefore {
+                    0% {
+                        transform: rotate(45deg);
+                    }
+
+                    50% {
+                        transform: translateY(0px);
+                    }
+
+                    100% {
+                        transform: translateY(-7px);
+                    }
+                }
+
+                @keyframes disableAfter {
+                    0% {
+                        transform: rotate(-45deg);
+                    }
+
+                    50% {
+                        transform: translateY(0px);
+                    }
+
+                    100% {
+                        transform: translateY(7px);
+                    }
+                }
+
+                background-color: #F9BFC4;
+                transition: background-color 0.5s ease-in;
+
+                &::after {
+                    animation-name: disableAfter;
+                    animation-duration: 0.8s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+
+                &::before {
+                    animation-name: disableBefore;
+                    animation-duration: 0.8s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 767px) {
+
+        button {
+            display: none;
+        }
+
+    }
+
     svg {
         font-size: 1.5rem;
 
@@ -20,6 +166,7 @@ nav {
         svg {
             background-color: #fff;
         }
+
     }
 
     ul {

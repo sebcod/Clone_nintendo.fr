@@ -1,8 +1,9 @@
 main {
     margin-top: 70px;
-    margin-left: 90px;
+    transition: opacity .3s cubic-bezier(.25, .46, .45, .94);
 
     @media screen and (max-width: 960px) {
+        margin-left: 90px;
         display: grid;
         padding: 5px 0 0 3px;
 
@@ -27,4 +28,13 @@ main {
         }
     }
 
+    @media screen and (max-width: 767px) {
+        margin-left: 0px;
+    }
+
+    .blur {
+        opacity: 10%;
+        filter: blur(1rem);
+
+    }
 }

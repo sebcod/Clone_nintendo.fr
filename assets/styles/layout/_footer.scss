@@ -1,17 +1,18 @@
 footer {
-
-    // padding-left: 88px;
-    width: 75%;
+    @media screen and (max-width: 960px) {
+        margin-left: 88px;
+    }
 
     .partager {
         display: flex;
         background-color: #333333;
 
-        margin: 20px 0px 20px 5px;
+        margin: 50px 0px 20px 5px;
         padding: 10px;
         text-transform: uppercase;
         font-size: 2rem;
         font-weight: bold;
+        align-items: center;
 
         svg {
             margin-right: 20px;
@@ -32,7 +33,6 @@ footer {
 
             img {
                 height: 100%;
-
                 left: 0px;
                 border-radius: 5px;
             }
@@ -40,7 +40,7 @@ footer {
 
         .buttonFacebook {
             background-color: #3B5998;
-            margin-left: 8%;
+            margin-left: auto;
             margin-right: 10px;
         }
 
@@ -49,52 +49,39 @@ footer {
             margin-right: auto;
         }
 
-        @media screen and (max-width: 960px) {
-            margin: 20px 0px 20px 0px;
-        }
 
     }
 
     .footerBanner {
-        margin-left: 5px;
+        padding-left: 5px;
 
-        @media screen and (max-width: 960px) {
-            margin: 0;
-        }
-    }
-
-    .footerHeader {
-        background-color: #E60012;
-        border-radius: 5px 5px 0 0px;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .btnFooterHeader {
-            background-color: #BF0010;
-            padding: 10px;
-            border-radius: 5px;
-        }
-    }
-
-    .footerBody {
-        background-color: #BF0010;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        &>div {
+        .footerHeader {
+            background-color: #E60012;
+            border-radius: 5px 5px 0 0px;
+            padding: 10px 20px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-    }
+            justify-content: space-between;
+            align-items: center;
 
-    @media screen and (max-width: 960px) {
-        width: 100%;
-        padding: 5px;
-        margin: 0;
+            .btnFooterHeader {
+                background-color: #BF0010;
+                padding: 10px;
+                border-radius: 5px;
+            }
+        }
+
+        .footerBody {
+            background-color: #BF0010;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &>div {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
     }
 }

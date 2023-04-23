@@ -38,6 +38,11 @@ body svg {
     margin: 0;
   }
 }
+@media screen and (max-width: 767px) {
+  body {
+    margin-left: 0px;
+  }
+}
 
 nav {
   position: fixed;
@@ -52,6 +57,119 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+}
+@media screen and (max-width: 767px) {
+  nav .menuBurger {
+    position: relative;
+    width: 25px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  nav .menuBurger .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #F9BFC4;
+  }
+  nav .menuBurger .bar::after, nav .menuBurger .bar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #F9BFC4;
+  }
+  nav .menuBurger .bar::before {
+    transform: translateY(-7px);
+  }
+  nav .menuBurger .bar::after {
+    transform: translateY(7px);
+  }
+  nav .aciveMenuBurger .bar {
+    background-color: transparent;
+    transition: background-color 0.5s ease-in;
+  }
+  @keyframes activeBefore {
+    0% {
+      transform: translateY(-7px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: rotate(45deg);
+    }
+  }
+  @keyframes activeAfter {
+    0% {
+      transform: translateY(7px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: rotate(-45deg);
+    }
+  }
+  nav .aciveMenuBurger .bar::after {
+    border: none;
+    animation-name: activeAfter;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  nav .aciveMenuBurger .bar::before {
+    border: none;
+    animation-name: activeBefore;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  nav .disableMenuBurger .bar {
+    background-color: #F9BFC4;
+    transition: background-color 0.5s ease-in;
+  }
+  @keyframes disableBefore {
+    0% {
+      transform: rotate(45deg);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(-7px);
+    }
+  }
+  @keyframes disableAfter {
+    0% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(7px);
+    }
+  }
+  nav .disableMenuBurger .bar::after {
+    animation-name: disableAfter;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  nav .disableMenuBurger .bar::before {
+    animation-name: disableBefore;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+@media screen and (min-width: 767px) {
+  nav button {
+    display: none;
+  }
 }
 nav svg {
   font-size: 1.5rem;
@@ -83,10 +201,11 @@ nav ul li:hover {
 
 main {
   margin-top: 70px;
-  margin-left: 90px;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media screen and (max-width: 960px) {
   main {
+    margin-left: 90px;
     display: grid;
     padding: 5px 0 0 3px;
   }
@@ -106,14 +225,27 @@ main {
     order: 6;
   }
 }
+@media screen and (max-width: 767px) {
+  main {
+    margin-left: 0px;
+  }
+}
+main .blur {
+  opacity: 10%;
+  filter: blur(1rem);
+}
 
 menu {
+  transition: none;
   position: relative;
   background-color: #BF0010;
   width: 88px;
   height: calc(100vh - 70px);
   position: fixed;
   left: 0;
+}
+menu .menuDivers {
+  display: none;
 }
 menu > :nth-child(9) {
   height: 55px;
@@ -155,7 +287,7 @@ menu > :nth-child(9) {
     display: none;
   }
 }
-menu .containerWhite {
+menu .callbackTop {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -195,6 +327,39 @@ menu li svg {
 menu li:hover {
   background-color: rgb(207, 0, 0);
 }
+@media screen and (max-width: 767px) {
+  menu {
+    overflow: hidden;
+    padding: 15px 50px 0 50px;
+    width: 100%;
+    height: 0;
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    z-index: 1;
+  }
+  menu li {
+    height: 120px;
+    border-radius: 5px;
+  }
+  menu li .menuDivers {
+    display: block;
+    font-size: 0.8rem;
+  }
+  menu > :nth-child(9) {
+    height: auto;
+  }
+  menu .callbackTop {
+    display: none;
+  }
+}
+menu .showMenu {
+  height: auto;
+}
+
 @media screen and (max-width: 1600px) {
   .gridPicture1 {
     display: grid;
@@ -695,17 +860,20 @@ menu li:hover {
   }
 }
 
-footer {
-  width: 75%;
+@media screen and (max-width: 960px) {
+  footer {
+    margin-left: 88px;
+  }
 }
 footer .partager {
   display: flex;
   background-color: #333333;
-  margin: 20px 0px 20px 5px;
+  margin: 50px 0px 20px 5px;
   padding: 10px;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
+  align-items: center;
 }
 footer .partager svg {
   margin-right: 20px;
@@ -729,27 +897,17 @@ footer .partager > div img {
 }
 footer .partager .buttonFacebook {
   background-color: #3B5998;
-  margin-left: 8%;
+  margin-left: auto;
   margin-right: 10px;
 }
 footer .partager .ButtonTwitter {
   background-color: #55ACEE;
   margin-right: auto;
 }
-@media screen and (max-width: 960px) {
-  footer .partager {
-    margin: 20px 0px 20px 0px;
-  }
-}
 footer .footerBanner {
-  margin-left: 5px;
+  padding-left: 5px;
 }
-@media screen and (max-width: 960px) {
-  footer .footerBanner {
-    margin: 0;
-  }
-}
-footer .footerHeader {
+footer .footerBanner .footerHeader {
   background-color: #E60012;
   border-radius: 5px 5px 0 0px;
   padding: 10px 20px;
@@ -757,56 +915,20 @@ footer .footerHeader {
   justify-content: space-between;
   align-items: center;
 }
-footer .footerHeader .btnFooterHeader {
+footer .footerBanner .footerHeader .btnFooterHeader {
   background-color: #BF0010;
   padding: 10px;
   border-radius: 5px;
 }
-footer .footerBody {
+footer .footerBanner .footerBody {
   background-color: #BF0010;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-footer .footerBody > div {
+footer .footerBanner .footerBody > div {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-}
-@media screen and (max-width: 960px) {
-  footer {
-    width: 100%;
-    padding: 5px;
-    margin: 0;
-  }
-}
-
-.sortieRecentes {
-  background-color: #FFFFFF;
-  color: #333333;
-  padding: 10px;
-  font-family: "font1", sans-serif;
-  margin-bottom: 5px;
-  margin-top: 10px;
-}
-.sortieRecentes .contentSortieRecentes {
-  border-left: 5px solid #F4F4F4;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.voirToutesLesNouveautes {
-  color: #E60012;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 21px;
-  background-color: #fff;
-  padding: 10px 20px;
-  text-align: end;
-  text-transform: uppercase;
-}
-.voirToutesLesNouveautes:hover {
-  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
