@@ -9,9 +9,9 @@ burger.addEventListener('click', () =>{
     main.classList.toggle('blur');
     footer.classList.toggle('blur');
     
-    if(burger.classList.contains('aciveMenuBurger')){
-        burger.classList.toggle('disableMenuBurger');
-    }else{
-        burger.classList.toggle('aciveMenuBurger');
-    }
+     if(burger.classList.contains('aciveMenuBurger')){
+         burger.classList.toggle('disableMenuBurger');
+     }else{
+         burger.classList.toggle('aciveMenuBurger');
+     }
 })

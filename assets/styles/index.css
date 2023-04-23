@@ -199,6 +199,11 @@ nav ul li:hover {
   text-decoration: underline;
 }
 
+.blur {
+  opacity: 10%;
+  filter: blur(1rem);
+}
+
 main {
   margin-top: 70px;
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -230,9 +235,9 @@ main {
     margin-left: 0px;
   }
 }
-main .blur {
-  opacity: 10%;
-  filter: blur(1rem);
+
+.showMenu {
+  height: auto;
 }
 
 menu {
@@ -355,9 +360,6 @@ menu li:hover {
   menu .callbackTop {
     display: none;
   }
-}
-menu .showMenu {
-  height: auto;
 }
 
 @media screen and (max-width: 1600px) {
