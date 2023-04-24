@@ -46,7 +46,7 @@ body svg {
 
 nav {
   position: fixed;
-  z-index: 10000;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -59,6 +59,21 @@ nav {
   padding: 0 20px;
 }
 @media screen and (max-width: 767px) {
+  nav {
+    padding: 0 10px;
+  }
+  nav .leftPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  nav .leftPart svg {
+    font-size: 1.2rem;
+  }
+  nav .rightPart ul {
+    gap: 10px;
+  }
   nav .menuBurger {
     position: relative;
     width: 25px;

@@ -1,6 +1,6 @@
 nav {
     position: fixed;
-    z-index: 10000;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
@@ -11,6 +11,23 @@ nav {
     padding: 0 20px;
 
     @media screen and (max-width: 767px) {
+
+        padding: 0 10px;
+
+        .leftPart {
+            @include center;
+            gap: 30px;
+
+            svg {
+                font-size: 1.2rem;
+            }
+        }
+
+        .rightPart {
+            ul {
+                gap: 10px;
+            }
+        }
 
         .menuBurger {
             position: relative;
