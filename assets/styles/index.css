@@ -522,6 +522,54 @@ menu li:hover {
     grid-area: 4/2/5/4;
   }
 }
+@media screen and (max-width: 767px) {
+  .gridPicture1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(14, 1fr);
+  }
+  .gridPicture1 .div1 {
+    grid-area: 1/1/3/3;
+  }
+  .gridPicture1 .div2 {
+    grid-area: 3/1/5/3;
+    position: relative;
+  }
+  .gridPicture1 .div2 img {
+    position: absolute;
+  }
+  .gridPicture1 .div2 .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .gridPicture1 .div3 {
+    grid-area: 5/1/7/3;
+  }
+  .gridPicture1 .div4 {
+    grid-area: 7/1/8/3;
+    position: relative;
+  }
+  .gridPicture1 .div4 img {
+    position: absolute;
+  }
+  .gridPicture1 .div4 .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .gridPicture1 .div5 {
+    grid-area: 8/1/10/3;
+  }
+  .gridPicture1 .div6 {
+    grid-area: 10/1/12/3;
+  }
+  .gridPicture1 .div7 {
+    grid-area: 12/1/14/3;
+  }
+  .gridPicture1 .div8 {
+    grid-area: 14/1/15/3;
+  }
+}
 
 @media screen and (max-width: 1600px) {
   .gridPicture2 {
