@@ -76,6 +76,10 @@
                 }
             }
 
+            @media screen and (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
+            }
 
             &>:nth-child(n+6) {
                 display: none;
