@@ -893,6 +893,11 @@ menu li:hover {
     cursor: pointer;
   }
 }
+@media screen and (max-width: 767px) {
+  .bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .leftPart {
+    width: 30%;
+  }
+}
 
 @media screen and (max-width: 1600px) {
   .sortiesRecentesBlock {

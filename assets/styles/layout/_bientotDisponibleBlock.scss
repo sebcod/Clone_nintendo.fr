@@ -104,4 +104,14 @@
         }
     }
 
+    @media screen and (max-width: 767px) {
+        .bientotDisponibleBody {
+            .bientotDisponibleCard {
+
+                .leftPart {
+                    width: 30%;
+                }
+            }
+        }
+    }
 }
