@@ -814,7 +814,6 @@ menu li:hover {
 @media screen and (max-width: 960px) {
   .bientotDisponibleBlock {
     width: 100%;
-    padding-right: 5px;
   }
   .bientotDisponibleBlock .bientotDisponibleHeader {
     background-color: #FFFFFF;
@@ -907,7 +906,6 @@ menu li:hover {
 @media screen and (max-width: 960px) {
   .sortiesRecentesBlock {
     width: 100%;
-    padding-right: 5px;
   }
   .sortiesRecentesBlock .sortiesRecentesHeader {
     background-color: #FFFFFF;
@@ -986,6 +984,11 @@ menu li:hover {
     cursor: pointer;
   }
 }
+@media screen and (max-width: 767px) {
+  .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .leftPart {
+    width: 30%;
+  }
+}
 
 footer .partager {
   display: flex;
@@ -1015,6 +1018,11 @@ footer .partager .buttonsContainer .ButtonWhatsapp {
   width: 214px;
   height: 38px;
   align-items: center;
+}
+footer .partager .buttonsContainer .buttonFacebook:hover,
+footer .partager .buttonsContainer .ButtonTwitter:hover,
+footer .partager .buttonsContainer .ButtonWhatsapp:hover {
+  cursor: pointer;
 }
 footer .partager .buttonsContainer .buttonFacebook img,
 footer .partager .buttonsContainer .ButtonTwitter img,

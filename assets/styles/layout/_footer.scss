@@ -32,6 +32,10 @@ footer {
                 height: 38px;
                 align-items: center;
 
+                &:hover {
+                    cursor: pointer;
+                }
+
                 img {
                     height: 100%;
                     left: 0px;
