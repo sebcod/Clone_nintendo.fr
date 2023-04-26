@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
 *,
 ::after,
 ::before {
@@ -23,6 +28,7 @@ a,
   src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth/wght.ttf);
 }
 body {
+  padding-top: -70px;
   padding-left: 88px;
   background-color: #f4f4f4;
   color: #fff;

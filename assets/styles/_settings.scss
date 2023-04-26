@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
 *,
 ::after,
 ::before {
@@ -49,6 +54,7 @@ $colorTextGris: #333333;
 $font1: "font1", sans-serif;
 
 body {
+    padding-top: -70px;
     padding-left: 88px;
     background-color: #f4f4f4;
     color: #fff;
