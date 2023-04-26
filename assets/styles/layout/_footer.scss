@@ -1,54 +1,84 @@
 footer {
-    @media screen and (max-width: 960px) {
-        margin-left: 88px;
-    }
-
     .partager {
         display: flex;
         background-color: #333333;
-
         margin: 50px 0px 20px 5px;
         padding: 10px;
-        text-transform: uppercase;
-        font-size: 2rem;
-        font-weight: bold;
         align-items: center;
+
+        p {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: bold;
+        }
 
         svg {
             margin-right: 20px;
             margin-left: auto;
         }
 
-        &>div {
-            display: flex;
-            gap: 10px;
-            text-transform: capitalize;
-            font-size: 0.9rem;
-            font-weight: normal;
-            border-radius: 5px;
-            width: 214px;
-            height: 34px;
-            align-items: center;
+        .buttonsContainer {
 
-            img {
-                height: 100%;
-                left: 0px;
+            .buttonFacebook,
+            .ButtonTwitter,
+            .ButtonWhatsapp {
+                display: flex;
+                gap: 10px;
+                text-transform: capitalize;
+                font-size: 0.9rem;
+                font-weight: normal;
                 border-radius: 5px;
+                width: 214px;
+                height: 38px;
+                align-items: center;
+
+                img {
+                    height: 100%;
+                    left: 0px;
+                    border-radius: 5px;
+                }
+            }
+
+            .buttonFacebook {
+                background-color: #3B5998;
+            }
+
+            .ButtonTwitter {
+                background-color: #55ACEE;
+            }
+
+            .ButtonWhatsapp {
+                @media screen and (min-width: 767px) {
+                    display: none;
+                }
             }
         }
 
-        .buttonFacebook {
-            background-color: #3B5998;
-            margin-left: auto;
-            margin-right: 10px;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 15px;
+            gap: 10px;
+
+            svg {
+                display: none;
+            }
+
+            .buttonsContainer {
+                display: flex;
+                gap: 60px;
+
+                .buttonFacebook,
+                .ButtonTwitter,
+                .ButtonWhatsapp {
+                    width: 38px;
+
+                    span {
+                        display: none;
+                    }
+                }
+
+            }
         }
-
-        .ButtonTwitter {
-            background-color: #55ACEE;
-            margin-right: auto;
-        }
-
-
     }
 
     .footerBanner {
@@ -82,5 +112,14 @@ footer {
                 gap: 20px;
             }
         }
+    }
+
+    @media screen and (max-width: 960px) {
+        margin-left: 88px;
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-left: 0;
+        margin-right: 5px;
     }
 }
