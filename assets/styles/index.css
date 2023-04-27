@@ -998,6 +998,10 @@ menu li:hover {
 
 footer .partager {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 20px;
   background-color: #333333;
   margin: 50px 0px 20px 5px;
   padding: 10px;
@@ -1008,13 +1012,9 @@ footer .partager p {
   font-size: 2rem;
   font-weight: bold;
 }
-footer .partager svg {
-  margin-right: 20px;
-  margin-left: auto;
-}
 footer .partager .buttonsContainer .buttonFacebook,
-footer .partager .buttonsContainer .ButtonTwitter,
-footer .partager .buttonsContainer .ButtonWhatsapp {
+footer .partager .buttonsContainer .buttonTwitter,
+footer .partager .buttonsContainer .buttonWhatsapp {
   display: flex;
   gap: 10px;
   text-transform: capitalize;
@@ -1026,13 +1026,13 @@ footer .partager .buttonsContainer .ButtonWhatsapp {
   align-items: center;
 }
 footer .partager .buttonsContainer .buttonFacebook:hover,
-footer .partager .buttonsContainer .ButtonTwitter:hover,
-footer .partager .buttonsContainer .ButtonWhatsapp:hover {
+footer .partager .buttonsContainer .buttonTwitter:hover,
+footer .partager .buttonsContainer .buttonWhatsapp:hover {
   cursor: pointer;
 }
 footer .partager .buttonsContainer .buttonFacebook img,
-footer .partager .buttonsContainer .ButtonTwitter img,
-footer .partager .buttonsContainer .ButtonWhatsapp img {
+footer .partager .buttonsContainer .buttonTwitter img,
+footer .partager .buttonsContainer .buttonWhatsapp img {
   height: 100%;
   left: 0px;
   border-radius: 5px;
@@ -1040,12 +1040,23 @@ footer .partager .buttonsContainer .ButtonWhatsapp img {
 footer .partager .buttonsContainer .buttonFacebook {
   background-color: #3B5998;
 }
-footer .partager .buttonsContainer .ButtonTwitter {
+footer .partager .buttonsContainer .buttonTwitter {
   background-color: #55ACEE;
 }
 @media screen and (min-width: 767px) {
-  footer .partager .buttonsContainer .ButtonWhatsapp {
+  footer .partager .buttonsContainer .buttonWhatsapp {
     display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  footer .partager .buttonsContainer {
+    display: flex;
+    gap: 10px;
+  }
+  footer .partager .buttonsContainer .buttonFacebook,
+  footer .partager .buttonsContainer .buttonTwitter {
+    display: flex;
+    width: 130px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1062,13 +1073,13 @@ footer .partager .buttonsContainer .ButtonTwitter {
     gap: 60px;
   }
   footer .partager .buttonsContainer .buttonFacebook,
-  footer .partager .buttonsContainer .ButtonTwitter,
-  footer .partager .buttonsContainer .ButtonWhatsapp {
+  footer .partager .buttonsContainer .buttonTwitter,
+  footer .partager .buttonsContainer .buttonWhatsapp {
     width: 38px;
   }
   footer .partager .buttonsContainer .buttonFacebook span,
-  footer .partager .buttonsContainer .ButtonTwitter span,
-  footer .partager .buttonsContainer .ButtonWhatsapp span {
+  footer .partager .buttonsContainer .buttonTwitter span,
+  footer .partager .buttonsContainer .buttonWhatsapp span {
     display: none;
   }
 }
