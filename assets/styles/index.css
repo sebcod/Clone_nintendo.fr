@@ -227,7 +227,6 @@ nav ul li:hover {
 
 main {
   padding: 5px;
-  padding-right: 10px;
   margin-top: 70px;
   transition: all 0.5s ease 0s;
   display: flex;
@@ -279,21 +278,6 @@ main .dernieresNewsBlockRightPartMain {
   }
   main .dernieresNewsBlockRightPartMain {
     display: none;
-  }
-  main .gridPicture1 {
-    order: 1;
-  }
-  main .gridPicture2 {
-    order: 3;
-  }
-  main .dernieresNewsBlock {
-    order: 2;
-  }
-  main .bientotDisponibleBlock {
-    order: 5;
-  }
-  main .sortiesRecentesBlock {
-    order: 6;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1021,6 +1005,9 @@ menu li:hover {
   }
 }
 
+footer {
+  width: 76%;
+}
 footer .partager {
   display: flex;
   justify-content: center;
@@ -1133,6 +1120,11 @@ footer .footerBanner .footerBody > div {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+@media screen and (max-width: 1600px) {
+  footer {
+    width: 67%;
+  }
 }
 @media screen and (max-width: 960px) {
   footer {

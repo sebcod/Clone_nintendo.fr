@@ -1,4 +1,7 @@
 footer {
+
+    width: 76%;
+
     .partager {
         @include center;
         display: flex;
@@ -124,6 +127,10 @@ footer {
                 gap: 20px;
             }
         }
+    }
+
+    @media screen and (max-width: 1600px) {
+        width: 67%;
     }
 
     @media screen and (max-width: 960px) {
