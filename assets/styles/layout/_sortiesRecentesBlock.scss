@@ -1,105 +1,100 @@
 .sortiesRecentesBlock {
 
-    @media screen and (max-width: 1600px) {
-        width: 67%;
-    }
+    width: 100%;
 
-    @media screen and (max-width: 960px) {
-        width: 100%;
+    .sortiesRecentesHeader {
+        background-color: #FFFFFF;
+        color: $colorTextGris;
+        padding: 10px;
+        font-family: $font1;
+        margin-bottom: 5px;
+        margin-top: 10px;
 
-        .sortiesRecentesHeader {
-            background-color: #FFFFFF;
-            color: $colorTextGris;
+        .sortiesRecentesHeaderContent {
+            border-left: 5px solid #F4F4F4;
             padding: 10px;
-            font-family: $font1;
-            margin-bottom: 5px;
-            margin-top: 10px;
-
-            .sortiesRecentesHeaderContent {
-                border-left: 5px solid #F4F4F4;
-                padding: 10px;
-                font-size: 18px;
-                font-weight: 700;
-            }
+            font-size: 18px;
+            font-weight: 700;
         }
+    }
 
-        .sortiesRecentesbody {
-            .sortiesRecentesCard {
-                display: flex;
+    .sortiesRecentesbody {
+        .sortiesRecentesCard {
+            display: flex;
 
-                .leftPart {
-                    padding: 5px;
-                    background-color: #FFFFFF;
-                    width: 20%;
-                    margin-bottom: 4px;
+            .leftPart {
+                padding: 5px;
+                background-color: #FFFFFF;
+                width: 20%;
+                margin-bottom: 4px;
 
-                    img {
-                        width: 100%;
-                        border-radius: 5px;
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                    }
+                img {
+                    width: 100%;
+                    border-radius: 5px;
                 }
 
-                .rightPart {
-                    background-color: #FFFFFF;
-                    width: 80%;
-                    padding: 5px;
-                    margin-bottom: 4px;
-                    color: $colorTextGris;
-
-                    h2 {
-                        font-weight: 700;
-                        font-size: 16px;
-                        line-height: 18px;
-                        color: #333333;
-                    }
-
-                    h3 {
-                        margin-top: 5px;
-                        font-weight: 300;
-                        font-size: 11px;
-                        line-height: 17px;
-                        color: #999999;
-                    }
-
-                    p {
-                        margin-top: 10px;
-                        font-weight: 400;
-                        font-size: 13px;
-                        line-height: 20px;
-                        color: #666666;
-
-                    }
-
-                    &:hover h2 {
-                        text-decoration: underline;
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                    }
+                &:hover {
+                    cursor: pointer;
                 }
             }
-        }
 
-        .sortiesRecentesFooter {
-            color: #E60012;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 21px;
-            background-color: #fff;
-            padding: 10px 20px;
-            text-align: end;
-            text-transform: uppercase;
+            .rightPart {
+                background-color: #FFFFFF;
+                width: 80%;
+                padding: 5px;
+                margin-bottom: 4px;
+                color: $colorTextGris;
 
-            &:hover {
-                cursor: pointer;
+                h2 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #333333;
+                }
+
+                h3 {
+                    margin-top: 5px;
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 17px;
+                    color: #999999;
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #666666;
+
+                }
+
+                &:hover h2 {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
+
+    .sortiesRecentesFooter {
+        color: #E60012;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+        background-color: #fff;
+        padding: 10px 20px;
+        text-align: end;
+        text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
 
     @media screen and (max-width: 767px) {
         .sortiesRecentesbody {

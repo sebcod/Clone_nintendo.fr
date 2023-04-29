@@ -1,91 +1,197 @@
-.dernieresNewsBlock {
-    @media screen and (max-width: 1600px) {
-        width: 33%;
-    }
+.dernieresNewsBlockLeftPartMain {
 
-    @media screen and (max-width: 960px) {
-        width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    .dernieresNewsbody {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
         padding: 0;
         margin: 0;
 
-        .dernieresNewsbody {
-            @media screen and (max-width: 960px) {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 4px;
-                padding: 0;
-                margin: 0;
 
+        .dernieresNews:nth-child(-n+5) {
+            display: flex;
 
-                &>:nth-child(-n+5) {
-                    display: flex;
+            .leftPart {
+                background-color: #FFFFFF;
+                width: 35%;
+                padding: 10px;
+                margin-bottom: 2px;
 
-                    .leftPart {
-                        background-color: #FFFFFF;
-                        width: 35%;
-                        padding: 10px;
-                        margin-bottom: 2px;
+                img {
+                    width: 100%;
+                }
 
-                        img {
-                            width: 100%;
-                        }
-
-                        &:hover {
-                            cursor: pointer;
-                        }
-                    }
-
-                    .rightPart {
-                        background-color: #FFFFFF;
-                        width: 65%;
-                        padding: 10px 0px;
-                        margin-bottom: 2px;
-                        color: $colorTextGris;
-
-                        h2 {
-                            font-weight: 700;
-                            font-size: 16px;
-                            line-height: 18px;
-                            color: #333333;
-                        }
-
-                        h3 {
-                            margin-top: 5px;
-                            font-weight: 300;
-                            font-size: 11px;
-                            line-height: 17px;
-                            color: #999999;
-                        }
-
-                        p {
-                            margin-top: 10px;
-                            font-weight: 400;
-                            font-size: 13px;
-                            line-height: 20px;
-                            color: #666666;
-                        }
-
-                        &:hover h2 {
-                            text-decoration: underline;
-                        }
-
-                        &:hover {
-                            cursor: pointer;
-                        }
-                    }
+                &:hover {
+                    cursor: pointer;
                 }
             }
 
-            @media screen and (max-width: 767px) {
-                display: flex;
-                flex-direction: column;
-            }
+            .rightPart {
+                background-color: #FFFFFF;
+                width: 65%;
+                padding: 10px 0px;
+                margin-bottom: 2px;
+                color: $colorTextGris;
 
-            &>:nth-child(n+6) {
-                display: none;
+                h2 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #333333;
+                }
+
+                h3 {
+                    margin-top: 5px;
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 17px;
+                    color: #999999;
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #666666;
+                }
+
+                &:hover h2 {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
+
+
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dernieresNews:nth-child(n+6) {
+            display: none;
+        }
     }
+
+
+    .dernieresNewsHeader {
+        background-color: #FFFFFF;
+        color: $colorTextGris;
+        padding: 10px;
+        font-family: $font1;
+        margin-bottom: 5px;
+
+        .dernieresNewsHeaderContent {
+            border-left: 5px solid #F4F4F4;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+
+
+    .dernieresNewsFooter {
+        background-color: #FFFFFF;
+        padding: 10px 20px;
+        text-align: end;
+        color: $colorTextGris;
+        font-family: $font1;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: uppercase;
+
+        svg {
+            font-size: 10px;
+            fill: $colorTextGris;
+        }
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+.dernieresNewsBlockRightPartMain {
+
+    width: 100%;
+
+    .dernieresNewsbody {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .dernieresNews {
+            display: flex;
+
+            .leftPart {
+                background-color: #FFFFFF;
+                width: 35%;
+                padding: 10px;
+                margin-bottom: 2px;
+
+                img {
+                    width: 100%;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .rightPart {
+                background-color: #FFFFFF;
+                width: 65%;
+                padding: 10px 0px;
+                margin-bottom: 2px;
+                color: $colorTextGris;
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #333333;
+                }
+
+                h3 {
+                    margin-top: 5px;
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 17px;
+                    color: #999999;
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: #666666;
+                }
+
+                &:hover h2 {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
 
     .dernieresNewsHeader {
         background-color: #FFFFFF;

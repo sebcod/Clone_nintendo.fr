@@ -54,16 +54,16 @@ footer {
                 }
             }
 
-            @media screen and (max-width: 960px) {
-                display: flex;
-                gap: 10px;
 
-                .buttonFacebook,
-                .buttonTwitter {
-                    display: flex;
-                    width: 130px;
-                }
+            display: flex;
+            gap: 10px;
+
+            .buttonFacebook,
+            .buttonTwitter {
+                display: flex;
+                width: 130px;
             }
+
         }
 
         @media screen and (max-width: 767px) {
