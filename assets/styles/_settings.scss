@@ -9,6 +9,7 @@ html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition: all .3s ease 0s;
 }
 
 li {
@@ -48,7 +49,7 @@ $colorTextGris: #333333;
 
 @font-face {
     font-family: "font1";
-    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth/wght.ttf);
+    src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
 }
 
 $font1: "font1", sans-serif;
