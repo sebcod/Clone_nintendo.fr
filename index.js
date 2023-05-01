@@ -12,6 +12,7 @@ const menuJeuxPages = document.getElementById("menuJeuxPages");
 
 burger.addEventListener("click", () => {
   menu.classList.toggle("showMenu");
+  menu.classList.toggle("menuMobileActive");
   main.classList.toggle("blur");
   footer.classList.toggle("blur");
 
