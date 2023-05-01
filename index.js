@@ -7,6 +7,23 @@ const footerChangeCountry = document.querySelector(".footerChangeCountry");
 const menuJeux = document.getElementById("menuJeux");
 const menuJeuxPages = document.getElementById("menuJeuxPages");
 
+window.addEventListener("resize", () => {
+  if (window.matchMedia("(min-width: 767px)").matches) {
+    main.classList.remove("blur");
+    footer.classList.remove("blur");
+  } else {
+    if (burger.classList.contains("aciveMenuBurger")) {
+      main.classList.add("blur");
+      footer.classList.add("blur");
+    }
+  }
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    if (!burger.classList.contains("aciveMenuBurger")) {
+      main.classList.remove("blur");
+      footer.classList.remove("blur");
+    }
+  }
+});
 
 burger.addEventListener("click", () => {
   menu.classList.toggle("menuMobileActive");

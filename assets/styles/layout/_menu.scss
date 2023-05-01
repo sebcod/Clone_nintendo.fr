@@ -2,10 +2,19 @@
     display: grid;
 }
 
+.menuPagesHidden {
+    display: none;
+}
+
 menu {
+
     transition: none;
     position: relative;
     background-color: #BF0010;
+    grid-template-columns: 88px;
+    grid-template-rows: repeat(9, 88px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     width: 88px;
     height: calc(100vh - 70px);
     position: fixed;
@@ -91,8 +100,8 @@ menu {
         .corner {
             fill: $colorCornerRougeNintendo;
             position: absolute;
-            top: 0;
-            right: 0;
+            top: -1px;
+            right: -1px;
         }
 
         svg {
@@ -143,9 +152,7 @@ menu {
         }
     }
 
-    .menuPagesHidden {
-        display: none;
-    }
+
 
     .menuPages {
 
