@@ -8,10 +8,7 @@ const menuJeux = document.getElementById("menuJeux");
 const menuJeuxPages = document.getElementById("menuJeuxPages");
 
 
-//console.log(menuJeux);
-
 burger.addEventListener("click", () => {
-  menu.classList.toggle("showMenu");
   menu.classList.toggle("menuMobileActive");
   main.classList.toggle("blur");
   footer.classList.toggle("blur");

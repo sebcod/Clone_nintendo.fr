@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
+
 }
 
 *,
@@ -9,7 +10,6 @@ html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: all .5s ease 0s;
 }
 
 li {
@@ -61,6 +61,7 @@ body {
     color: #fff;
     font-family: $font1;
     font-size: 11px;
+    transition: all .5s ease 0s;
 
     svg {
         fill: #fff;
