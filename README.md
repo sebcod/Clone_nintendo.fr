@@ -7,4 +7,7 @@
 [![CSS3](https://img.shields.io/badge/-CSS3-000?&logo=CSS3&logoColor=1572B6)](https://developer.mozilla.org/fr/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/-JavaScript-000?&logo=JavaScript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-![Screenshot of Clone_Nintendo.fr.](assets\img\Capture d’écran 2023-05-17 143226.jpg)
+<p align="center">
+  <img src="assets/img/Capture d’écran 2023-05-17 143226.jpg" height="350" alt="Thumbnail Clone Nintendo.fr desktop" title="Clone Nintendo.fr desktop">
+  <img src="assets/img/Capture d’écran 2023-05-17 152815.jpg" height="350" alt="Thumbnail Clone Nintendo.fr mobile" title="Clone Nintendo.fr mobile">
+</p>
