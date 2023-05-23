@@ -1,4 +1,4 @@
-# Clone_nintendo.fr
+# Clone home page nintendo.fr
 
 ## Languages
 
