@@ -31,10 +31,12 @@ burger.addEventListener("click", () => {
   footer.classList.toggle("blur");
 
   if (burger.classList.contains("aciveMenuBurger")) {
-    burger.classList.toggle("disableMenuBurger");
+    burger.classList.add("disableMenuBurger");
+    burger.classList.remove("aciveMenuBurger");
     sousMenuJeux.classList.remove("sousMenuVisible");
   } else {
-    burger.classList.toggle("aciveMenuBurger");
+    burger.classList.remove("disableMenuBurger");
+    burger.classList.add("aciveMenuBurger");
   }
 });
 
