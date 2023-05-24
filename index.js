@@ -5,7 +5,7 @@ const footer = document.querySelector("footer");
 const btnFooterHeader = document.querySelector(".btnFooterHeader");
 const footerChangeCountry = document.querySelector(".footerChangeCountry");
 const menuJeux = document.getElementById("menuJeux");
-const menuJeuxPages = document.getElementById("menuJeuxPages");
+const sousMenuJeux = document.getElementById("sousMenuJeux");
 
 window.addEventListener("resize", () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
@@ -32,7 +32,7 @@ burger.addEventListener("click", () => {
 
   if (burger.classList.contains("aciveMenuBurger")) {
     burger.classList.toggle("disableMenuBurger");
-    menuJeuxPages.classList.remove("menuPages");
+    sousMenuJeux.classList.remove("sousMenuVisible");
   } else {
     burger.classList.toggle("aciveMenuBurger");
   }
@@ -44,6 +44,20 @@ btnFooterHeader.addEventListener("click", () => {
   window.scrollTo(0, document.body.scrollHeight);
 });
 
-menuJeux.addEventListener("click", () => {
-  menuJeuxPages.classList.toggle("menuPages");
+menuJeux.addEventListener("click", (e) => {
+  sousMenuJeux.classList.toggle("sousMenuVisible");
+});
+
+// close sous menu on click outside.
+document.addEventListener("click", (e) => {
+  let sousMenuVisible = document.querySelector(".sousMenuVisible");
+  if (
+    !(
+      e.target.id ||
+      e.target.parentElement.id ||
+      e.target.parentElement.parentElement.id === sousMenuVisible.id
+    )
+  ) {
+    sousMenuVisible.classList.remove("sousMenuVisible");
+  }
 });
