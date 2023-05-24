@@ -51,13 +51,26 @@ menuJeux.addEventListener("click", (e) => {
 // close sous menu on click outside.
 document.addEventListener("click", (e) => {
   let sousMenuVisible = document.querySelector(".sousMenuVisible");
-  if (
-    !(
-      e.target.id ||
-      e.target.parentElement.id ||
-      e.target.parentElement.parentElement.id === sousMenuVisible.id
-    )
-  ) {
-    sousMenuVisible.classList.remove("sousMenuVisible");
+  if (sousMenuVisible !== null) {
+    if (
+      !(
+        e.target.id ||
+        e.target.parentElement.id ||
+        e.target.parentElement.parentElement.id === sousMenuVisible.id
+      )
+    ) {
+      sousMenuVisible.classList.remove("sousMenuVisible");
+    }
   }
+});
+
+// close sous menu on click menuBack
+document.addEventListener("click", (e) => {
+  let menuBack = document.querySelector(".menuBack");
+  menuBack.addEventListener("click", () => {
+    let sousMenuVisible = document.querySelector(".sousMenuVisible");
+    if (sousMenuVisible !== null) {
+      sousMenuVisible.classList.toggle("sousMenuVisible");
+    }
+  });
 });

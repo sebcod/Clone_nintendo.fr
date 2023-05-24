@@ -190,16 +190,34 @@ menu {
                 &:hover {
                     color: $colorRougeNintendo;
                     text-decoration: underline;
+                    cursor: pointer;
                 }
 
             }
         }
 
+        .menuBack {
+            display: none;
+        }
+
         @media screen and (max-width: 767px) {
             width: 100%;
             height: 100%;
-            border: solid black;
-            left: 0;
+            border: none;
+            left: 0px;
+
+            .menuBack {
+                @include center;
+                justify-content: left;
+                gap: 10px;
+                padding: 10px 20px;
+                border-bottom: 4px solid $colorCornerRougeNintendo;
+
+                svg {
+                    fill: $colorGris;
+                }
+            }
+
         }
     }
 }
