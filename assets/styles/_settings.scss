@@ -50,18 +50,18 @@ $colorGris: rgb(153, 153, 153);
 
 
 @font-face {
-    font-family: "font1";
-    src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+    font-family: "Open_sans";
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
-$font1: "font1", sans-serif;
+$Open_sans: "Open_sans", sans-serif;
 
 body {
     padding-top: -70px;
     padding-left: 88px;
     background-color: #f4f4f4;
     color: #fff;
-    font-family: $font1;
+    font-family: $Open_sans;
     font-size: 11px;
     transition: all .5s ease 0s;
 

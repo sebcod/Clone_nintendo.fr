@@ -7,7 +7,7 @@ const footerChangeCountry = document.querySelector(".footerChangeCountry");
 const menuJeux = document.getElementById("menuJeux");
 const sousMenuJeux = document.getElementById("sousMenuJeux");
 const menuHardware = document.getElementById("menuHardware");
-const sousMenuHardware = document.getElementById("sousMenuHardware");
+const subMenuHardware = document.getElementById("subMenuHardware");
 
 window.addEventListener("resize", () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
@@ -49,11 +49,11 @@ btnFooterHeader.addEventListener("click", () => {
 
 menuJeux.addEventListener("click", (e) => {
   sousMenuJeux.classList.toggle("sousMenuVisible");
-  sousMenuHardware.classList.remove("sousMenuVisible");
+  subMenuHardware.classList.remove("sousMenuVisible");
 });
 
 menuHardware.addEventListener("click", (e) => {
-  sousMenuHardware.classList.toggle("sousMenuVisible");
+  subMenuHardware.classList.toggle("sousMenuVisible");
   sousMenuJeux.classList.remove("sousMenuVisible");
 });
 

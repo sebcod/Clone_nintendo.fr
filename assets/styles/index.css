@@ -25,15 +25,15 @@ a,
 /* Mixins */
 /*  color  */
 @font-face {
-  font-family: "font1";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+  font-family: "Open_sans";
+  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 body {
   padding-top: -70px;
   padding-left: 88px;
   background-color: #f4f4f4;
   color: #fff;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   font-size: 11px;
   transition: all 0.5s ease 0s;
 }
@@ -407,15 +407,15 @@ menu li:hover {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
-  menu li {
+  menu > li {
     height: 106px;
     border-radius: 5px;
   }
-  menu li .menuDivers {
+  menu > li .menuDivers {
     display: block;
     font-size: 0.8rem;
   }
-  menu li .corner {
+  menu > li .corner {
     top: -1px;
     right: -1px;
   }
@@ -441,7 +441,8 @@ menu .sousMenuVisible {
 menu .sousMenuVisible p {
   font-size: 1.2rem;
   font-weight: 700;
-  padding: 30px 20px 20px 20px;
+  color: #000;
+  padding: 30px 20px 20px 16px;
 }
 menu .sousMenuVisible ul {
   display: flex;
@@ -449,9 +450,11 @@ menu .sousMenuVisible ul {
   gap: 0;
 }
 menu .sousMenuVisible ul li {
-  font-size: 0.8rem;
+  font-size: 12px;
+  font-weight: 300;
   padding: 10px 20px;
   border: none;
+  text-align: left;
   align-items: start;
   color: #333333;
   height: auto;
@@ -464,6 +467,26 @@ menu .sousMenuVisible ul li:hover {
 }
 menu .sousMenuVisible .menuBack {
   display: none;
+}
+menu .sousMenuVisible ul {
+  padding: 0 8px;
+}
+menu .sousMenuVisible ul li {
+  padding-left: 8px;
+}
+menu .sousMenuVisible .sub-menu-tittle {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+menu .sousMenuVisible .sub-menu-tittle:hover {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+menu .sousMenuVisible .separator {
+  border-bottom: 1px solid #e5e5e5;
 }
 @media screen and (max-width: 767px) {
   menu .sousMenuVisible {
@@ -484,16 +507,15 @@ menu .sousMenuVisible .menuBack {
   menu .sousMenuVisible .menuBack svg {
     fill: rgb(153, 153, 153);
   }
-  menu .sousMenuVisible .menuBackHardware {
+  menu .sousMenuVisible .subMenuHardware {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: left;
     gap: 10px;
-    padding: 10px 20px;
     border-bottom: 4px solid rgb(111, 0, 9);
   }
-  menu .sousMenuVisible .menuBackHardware svg {
+  menu .sousMenuVisible .subMenuHardware svg {
     fill: rgb(153, 153, 153);
   }
 }
@@ -801,7 +823,7 @@ menu .sousMenuVisible .menuBack {
   background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
 }
 .dernieresNewsBlockLeftPartMain .dernieresNewsHeader .dernieresNewsHeaderContent {
@@ -815,7 +837,7 @@ menu .sousMenuVisible .menuBack {
   padding: 10px 20px;
   text-align: end;
   color: #333333;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -890,7 +912,7 @@ menu .sousMenuVisible .menuBack {
   background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
 }
 .dernieresNewsBlockRightPartMain .dernieresNewsHeader .dernieresNewsHeaderContent {
@@ -904,7 +926,7 @@ menu .sousMenuVisible .menuBack {
   padding: 10px 20px;
   text-align: end;
   color: #333333;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -926,7 +948,7 @@ menu .sousMenuVisible .menuBack {
   background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
   margin-top: 10px;
 }
@@ -1011,7 +1033,7 @@ menu .sousMenuVisible .menuBack {
   background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
   margin-top: 10px;
 }
