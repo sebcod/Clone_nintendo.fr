@@ -6,6 +6,8 @@ const btnFooterHeader = document.querySelector(".btnFooterHeader");
 const footerChangeCountry = document.querySelector(".footerChangeCountry");
 const menuJeux = document.getElementById("menuJeux");
 const sousMenuJeux = document.getElementById("sousMenuJeux");
+const menuHardware = document.getElementById("menuHardware");
+const sousMenuHardware = document.getElementById("sousMenuHardware");
 
 window.addEventListener("resize", () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
@@ -33,7 +35,6 @@ burger.addEventListener("click", () => {
   if (burger.classList.contains("aciveMenuBurger")) {
     burger.classList.add("disableMenuBurger");
     burger.classList.remove("aciveMenuBurger");
-    sousMenuJeux.classList.remove("sousMenuVisible");
   } else {
     burger.classList.remove("disableMenuBurger");
     burger.classList.add("aciveMenuBurger");
@@ -48,9 +49,15 @@ btnFooterHeader.addEventListener("click", () => {
 
 menuJeux.addEventListener("click", (e) => {
   sousMenuJeux.classList.toggle("sousMenuVisible");
+  sousMenuHardware.classList.remove("sousMenuVisible");
 });
 
-// close sous menu on click outside.
+menuHardware.addEventListener("click", (e) => {
+  sousMenuHardware.classList.toggle("sousMenuVisible");
+  sousMenuJeux.classList.remove("sousMenuVisible");
+});
+
+// close sub-menu on click outside.
 document.addEventListener("click", (e) => {
   let sousMenuVisible = document.querySelector(".sousMenuVisible");
   if (sousMenuVisible !== null) {
@@ -66,13 +73,11 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// close sous menu on click menuBack
-document.addEventListener("click", (e) => {
-  let menuBack = document.querySelector(".menuBack");
+// close sub-menu on click menuBac
+let menuBacks = document.querySelectorAll(".menuBack");
+menuBacks.forEach((menuBack) => {
   menuBack.addEventListener("click", () => {
     let sousMenuVisible = document.querySelector(".sousMenuVisible");
-    if (sousMenuVisible !== null) {
-      sousMenuVisible.classList.toggle("sousMenuVisible");
-    }
+    sousMenuVisible.classList.remove("sousMenuVisible");
   });
 });

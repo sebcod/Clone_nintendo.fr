@@ -218,6 +218,18 @@ menu {
                 }
             }
 
+            .menuBackHardware {
+                @include center;
+                justify-content: left;
+                gap: 10px;
+                padding: 10px 20px;
+                border-bottom: 4px solid $colorCornerRougeNintendo;
+
+                svg {
+                    fill: $colorGris;
+                }
+            }
+
         }
     }
 }

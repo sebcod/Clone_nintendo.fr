@@ -484,6 +484,18 @@ menu .sousMenuVisible .menuBack {
   menu .sousMenuVisible .menuBack svg {
     fill: rgb(153, 153, 153);
   }
+  menu .sousMenuVisible .menuBackHardware {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding: 10px 20px;
+    border-bottom: 4px solid rgb(111, 0, 9);
+  }
+  menu .sousMenuVisible .menuBackHardware svg {
+    fill: rgb(153, 153, 153);
+  }
 }
 
 .gridPicture1 {
