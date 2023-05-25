@@ -8,6 +8,14 @@ const menuJeux = document.getElementById("menuJeux");
 const sousMenuJeux = document.getElementById("sousMenuJeux");
 const menuHardware = document.getElementById("menuHardware");
 const subMenuHardware = document.getElementById("subMenuHardware");
+const menuNintendoSwitchOnline = document.getElementById(
+  "menuNintendoSwitchOnline"
+);
+const subMenuNintendoSwitchOnline = document.getElementById(
+  "subMenuNintendoSwitchOnline"
+);
+const menuNews = document.getElementById("menuNews");
+const subMenuNews = document.getElementById("subMenuNews");
 
 window.addEventListener("resize", () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
@@ -47,15 +55,36 @@ btnFooterHeader.addEventListener("click", () => {
   window.scrollTo(0, document.body.scrollHeight);
 });
 
+//---------- open sub menu
 menuJeux.addEventListener("click", (e) => {
   sousMenuJeux.classList.toggle("sousMenuVisible");
   subMenuHardware.classList.remove("sousMenuVisible");
+  subMenuNintendoSwitchOnline.classList.remove("sousMenuVisible");
+  subMenuNews.classList.remove("sousMenuVisible");
 });
 
 menuHardware.addEventListener("click", (e) => {
   subMenuHardware.classList.toggle("sousMenuVisible");
   sousMenuJeux.classList.remove("sousMenuVisible");
+  subMenuNintendoSwitchOnline.classList.remove("sousMenuVisible");
+  subMenuNews.classList.remove("sousMenuVisible");
 });
+
+menuNintendoSwitchOnline.addEventListener("click", (e) => {
+  subMenuNintendoSwitchOnline.classList.toggle("sousMenuVisible");
+  sousMenuJeux.classList.remove("sousMenuVisible");
+  subMenuHardware.classList.remove("sousMenuVisible");
+  menuNintendoSwitchOnline.classList.remove("sousMenuVisible");
+  subMenuNews.classList.remove("sousMenuVisible");
+});
+
+menuNews.addEventListener("click", (e) => {
+  subMenuNews.classList.toggle("sousMenuVisible");
+  sousMenuJeux.classList.remove("sousMenuVisible");
+  subMenuHardware.classList.remove("sousMenuVisible");
+  subMenuNintendoSwitchOnline.classList.remove("sousMenuVisible");
+});
+//---------
 
 // close sub-menu on click outside.
 document.addEventListener("click", (e) => {
