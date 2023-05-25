@@ -5,7 +5,7 @@ const footer = document.querySelector("footer");
 const btnFooterHeader = document.querySelector(".btnFooterHeader");
 const footerChangeCountry = document.querySelector(".footerChangeCountry");
 const menuJeux = document.getElementById("menuJeux");
-const sousMenuJeux = document.getElementById("sousMenuJeux");
+const subMenuJeux = document.getElementById("subMenuJeux");
 const menuHardware = document.getElementById("menuHardware");
 const subMenuHardware = document.getElementById("subMenuHardware");
 const menuNintendoSwitchOnline = document.getElementById(
@@ -16,6 +16,8 @@ const subMenuNintendoSwitchOnline = document.getElementById(
 );
 const menuNews = document.getElementById("menuNews");
 const subMenuNews = document.getElementById("subMenuNews");
+const menuDivers = document.getElementById("menuDivers");
+const subMenuDivers = document.getElementById("subMenuDivers");
 
 window.addEventListener("resize", () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
@@ -57,47 +59,59 @@ btnFooterHeader.addEventListener("click", () => {
 
 //---------- open sub menu
 menuJeux.addEventListener("click", (e) => {
-  sousMenuJeux.classList.toggle("sousMenuVisible");
-  subMenuHardware.classList.remove("sousMenuVisible");
-  subMenuNintendoSwitchOnline.classList.remove("sousMenuVisible");
-  subMenuNews.classList.remove("sousMenuVisible");
+  subMenuJeux.classList.toggle("subMenuVisible");
+  subMenuHardware.classList.remove("subMenuVisible");
+  subMenuNintendoSwitchOnline.classList.remove("subMenuVisible");
+  subMenuNews.classList.remove("subMenuVisible");
+  subMenuDivers.classList.remove("subMenuVisible");
 });
 
 menuHardware.addEventListener("click", (e) => {
-  subMenuHardware.classList.toggle("sousMenuVisible");
-  sousMenuJeux.classList.remove("sousMenuVisible");
-  subMenuNintendoSwitchOnline.classList.remove("sousMenuVisible");
-  subMenuNews.classList.remove("sousMenuVisible");
+  subMenuHardware.classList.toggle("subMenuVisible");
+  subMenuJeux.classList.remove("subMenuVisible");
+  subMenuNintendoSwitchOnline.classList.remove("subMenuVisible");
+  subMenuNews.classList.remove("subMenuVisible");
+  subMenuDivers.classList.remove("subMenuVisible");
 });
 
 menuNintendoSwitchOnline.addEventListener("click", (e) => {
-  subMenuNintendoSwitchOnline.classList.toggle("sousMenuVisible");
-  sousMenuJeux.classList.remove("sousMenuVisible");
-  subMenuHardware.classList.remove("sousMenuVisible");
-  menuNintendoSwitchOnline.classList.remove("sousMenuVisible");
-  subMenuNews.classList.remove("sousMenuVisible");
+  subMenuNintendoSwitchOnline.classList.toggle("subMenuVisible");
+  subMenuJeux.classList.remove("subMenuVisible");
+  subMenuHardware.classList.remove("subMenuVisible");
+  menuNintendoSwitchOnline.classList.remove("subMenuVisible");
+  subMenuNews.classList.remove("subMenuVisible");
+  subMenuDivers.classList.remove("subMenuVisible");
 });
 
 menuNews.addEventListener("click", (e) => {
-  subMenuNews.classList.toggle("sousMenuVisible");
-  sousMenuJeux.classList.remove("sousMenuVisible");
-  subMenuHardware.classList.remove("sousMenuVisible");
-  subMenuNintendoSwitchOnline.classList.remove("sousMenuVisible");
+  subMenuNews.classList.toggle("subMenuVisible");
+  subMenuJeux.classList.remove("subMenuVisible");
+  subMenuHardware.classList.remove("subMenuVisible");
+  subMenuNintendoSwitchOnline.classList.remove("subMenuVisible");
+  subMenuDivers.classList.remove("subMenuVisible");
+});
+
+menuDivers.addEventListener("click", (e) => {
+  subMenuDivers.classList.toggle("subMenuVisible");
+  subMenuNews.classList.remove("subMenuVisible");
+  subMenuJeux.classList.remove("subMenuVisible");
+  subMenuHardware.classList.remove("subMenuVisible");
+  subMenuNintendoSwitchOnline.classList.remove("subMenuVisible");
 });
 //---------
 
 // close sub-menu on click outside.
 document.addEventListener("click", (e) => {
-  let sousMenuVisible = document.querySelector(".sousMenuVisible");
-  if (sousMenuVisible !== null) {
+  let subMenuVisible = document.querySelector(".subMenuVisible");
+  if (subMenuVisible !== null) {
     if (
       !(
         e.target.id ||
         e.target.parentElement.id ||
-        e.target.parentElement.parentElement.id === sousMenuVisible.id
+        e.target.parentElement.parentElement.id === subMenuVisible.id
       )
     ) {
-      sousMenuVisible.classList.remove("sousMenuVisible");
+      subMenuVisible.classList.remove("subMenuVisible");
     }
   }
 });
@@ -106,7 +120,7 @@ document.addEventListener("click", (e) => {
 let menuBacks = document.querySelectorAll(".menuBack");
 menuBacks.forEach((menuBack) => {
   menuBack.addEventListener("click", () => {
-    let sousMenuVisible = document.querySelector(".sousMenuVisible");
-    sousMenuVisible.classList.remove("sousMenuVisible");
+    let subMenuVisible = document.querySelector(".subMenuVisible");
+    subMenuVisible.classList.remove("subMenuVisible");
   });
 });

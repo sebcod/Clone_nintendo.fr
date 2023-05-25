@@ -293,7 +293,7 @@ main .dernieresNewsBlockRightPartMain {
   display: grid;
 }
 
-.sousMenuHidden {
+.subMenuHidden {
   display: none;
 }
 
@@ -427,7 +427,7 @@ menu li:hover {
     display: none;
   }
 }
-menu .sousMenuVisible {
+menu .subMenuVisible {
   display: block;
   color: #333333;
   background-color: #fff;
@@ -439,18 +439,18 @@ menu .sousMenuVisible {
   border-left: rgb(111, 0, 9) 2px solid;
   box-shadow: 88px 0px 115px -13px rgba(0, 0, 0, 0.4);
 }
-menu .sousMenuVisible p {
+menu .subMenuVisible p {
   font-size: 1.2rem;
   font-weight: 700;
   color: #000;
   padding: 30px 20px 20px 16px;
 }
-menu .sousMenuVisible ul {
+menu .subMenuVisible ul {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
-menu .sousMenuVisible ul li {
+menu .subMenuVisible ul li {
   font-size: 12px;
   font-weight: 300;
   padding: 10px 20px;
@@ -461,42 +461,42 @@ menu .sousMenuVisible ul li {
   height: auto;
   background-color: #fff;
 }
-menu .sousMenuVisible ul li:hover {
+menu .subMenuVisible ul li:hover {
   color: rgb(230, 0, 18);
   text-decoration: underline;
   cursor: pointer;
 }
-menu .sousMenuVisible .menuBack {
+menu .subMenuVisible .menuBack {
   display: none;
 }
-menu .sousMenuVisible ul {
+menu .subMenuVisible ul {
   padding: 0 8px;
 }
-menu .sousMenuVisible ul li {
+menu .subMenuVisible ul li {
   padding-left: 8px;
 }
-menu .sousMenuVisible .sub-menu-tittle {
+menu .subMenuVisible .sub-menu-tittle {
   color: #333;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1;
 }
-menu .sousMenuVisible .sub-menu-tittle:hover {
+menu .subMenuVisible .sub-menu-tittle:hover {
   color: inherit;
   text-decoration: inherit;
   cursor: inherit;
 }
-menu .sousMenuVisible .separator {
+menu .subMenuVisible .separator {
   border-bottom: 1px solid #e5e5e5;
 }
 @media screen and (max-width: 767px) {
-  menu .sousMenuVisible {
+  menu .subMenuVisible {
     width: 100%;
     height: 100%;
     border: none;
     left: 0px;
   }
-  menu .sousMenuVisible .menuBack {
+  menu .subMenuVisible .menuBack {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -505,10 +505,10 @@ menu .sousMenuVisible .separator {
     padding: 10px 20px;
     border-bottom: 4px solid rgb(111, 0, 9);
   }
-  menu .sousMenuVisible .menuBack svg {
+  menu .subMenuVisible .menuBack svg {
     fill: rgb(153, 153, 153);
   }
-  menu .sousMenuVisible .subMenuHardware {
+  menu .subMenuVisible .subMenuHardware {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -516,7 +516,7 @@ menu .sousMenuVisible .separator {
     gap: 10px;
     border-bottom: 4px solid rgb(111, 0, 9);
   }
-  menu .sousMenuVisible .subMenuHardware svg {
+  menu .subMenuVisible .subMenuHardware svg {
     fill: rgb(153, 153, 153);
   }
 }
