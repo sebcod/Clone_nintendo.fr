@@ -25,15 +25,15 @@ a,
 /* Mixins */
 /*  color  */
 @font-face {
-  font-family: "font1";
-  src: url(../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\wght.ttf);
+  font-family: "Open_sans";
+  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 body {
   padding-top: -70px;
   padding-left: 88px;
   background-color: #f4f4f4;
   color: #fff;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   font-size: 11px;
   transition: all 0.5s ease 0s;
 }
@@ -94,16 +94,15 @@ nav {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #f9bfc4;
+    background-color: #F9BFC4;
   }
-  nav .menuBurger .bar::after,
-  nav .menuBurger .bar::before {
+  nav .menuBurger .bar::after, nav .menuBurger .bar::before {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #f9bfc4;
+    background-color: #F9BFC4;
   }
   nav .menuBurger .bar::before {
     transform: translateY(-7px);
@@ -152,7 +151,7 @@ nav {
     animation-fill-mode: forwards;
   }
   nav .disableMenuBurger .bar {
-    background-color: #f9bfc4;
+    background-color: #F9BFC4;
     transition: background-color 0.5s ease-in;
   }
   @keyframes disableBefore {
@@ -265,8 +264,6 @@ main .dernieresNewsBlockRightPartMain {
 }
 @media screen and (max-width: 960px) {
   main {
-    //opacity: 100%;
-    //filter: blur(0);
     margin-left: 90px;
     display: grid;
     padding: 5px 0 0 3px;
@@ -291,18 +288,19 @@ main .dernieresNewsBlockRightPartMain {
     padding-left: 5px;
   }
 }
+
 .menuMobileActive {
   display: grid;
 }
 
-.menuPagesHidden {
+.subMenuHidden {
   display: none;
 }
 
 menu {
   transition: none;
   position: relative;
-  background-color: #bf0010;
+  background-color: #BF0010;
   grid-template-columns: 88px;
   grid-template-rows: repeat(9, 88px);
   grid-column-gap: 0px;
@@ -395,6 +393,7 @@ menu li svg {
 }
 menu li:hover {
   background-color: rgb(207, 0, 0);
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   menu {
@@ -409,15 +408,15 @@ menu li:hover {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
-  menu li {
+  menu > li {
     height: 106px;
     border-radius: 5px;
   }
-  menu li .menuDivers {
+  menu > li .menuDivers {
     display: block;
     font-size: 0.8rem;
   }
-  menu li .corner {
+  menu > li .corner {
     top: -1px;
     right: -1px;
   }
@@ -428,7 +427,7 @@ menu li:hover {
     display: none;
   }
 }
-menu .menuPages {
+menu .subMenuVisible {
   display: block;
   color: #333333;
   background-color: #fff;
@@ -440,35 +439,85 @@ menu .menuPages {
   border-left: rgb(111, 0, 9) 2px solid;
   box-shadow: 88px 0px 115px -13px rgba(0, 0, 0, 0.4);
 }
-menu .menuPages p {
+menu .subMenuVisible p {
   font-size: 1.2rem;
   font-weight: 700;
-  padding: 30px 20px 20px 20px;
+  color: #000;
+  padding: 30px 20px 20px 16px;
 }
-menu .menuPages ul {
+menu .subMenuVisible ul {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
-menu .menuPages ul li {
-  font-size: 0.8rem;
+menu .subMenuVisible ul li {
+  font-size: 12px;
+  font-weight: 300;
   padding: 10px 20px;
   border: none;
+  text-align: left;
   align-items: start;
   color: #333333;
   height: auto;
   background-color: #fff;
 }
-menu .menuPages ul li:hover {
+menu .subMenuVisible ul li:hover {
   color: rgb(230, 0, 18);
   text-decoration: underline;
+  cursor: pointer;
+}
+menu .subMenuVisible .menuBack {
+  display: none;
+}
+menu .subMenuVisible ul {
+  padding: 0 8px;
+}
+menu .subMenuVisible ul li {
+  padding-left: 8px;
+}
+menu .subMenuVisible .sub-menu-tittle {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+menu .subMenuVisible .sub-menu-tittle:hover {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+menu .subMenuVisible .separator {
+  border-bottom: 1px solid #e5e5e5;
 }
 @media screen and (max-width: 767px) {
-  menu .menuPages {
+  menu .subMenuVisible {
     width: 100%;
     height: 100%;
-    border: solid black;
-    left: 0;
+    border: none;
+    left: 0px;
+  }
+  menu .subMenuVisible .menuBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding: 10px 20px;
+    border-bottom: 4px solid rgb(111, 0, 9);
+  }
+  menu .subMenuVisible .menuBack svg {
+    fill: rgb(153, 153, 153);
+  }
+  menu .subMenuVisible .subMenuHardware {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    border-bottom: 4px solid rgb(111, 0, 9);
+  }
+  menu .subMenuVisible .subMenuHardware svg {
+    fill: rgb(153, 153, 153);
   }
 }
 
@@ -714,86 +763,52 @@ menu .menuPages ul li:hover {
   padding: 0;
   margin: 0;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5) {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) {
   display: flex;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .leftPart {
-  background-color: #ffffff;
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .leftPart {
+  background-color: #FFFFFF;
   width: 35%;
   padding: 10px;
   margin-bottom: 2px;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .leftPart
-  img {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .leftPart img {
   width: 100%;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .leftPart:hover {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .leftPart:hover {
   cursor: pointer;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .rightPart {
-  background-color: #ffffff;
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .rightPart {
+  background-color: #FFFFFF;
   width: 65%;
   padding: 10px 0px;
   margin-bottom: 2px;
   color: #333333;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .rightPart
-  h2 {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .rightPart h2 {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #333333;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .rightPart
-  h3 {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .rightPart h3 {
   margin-top: 5px;
   font-weight: 300;
   font-size: 11px;
   line-height: 17px;
   color: #999999;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .rightPart
-  p {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .rightPart p {
   margin-top: 10px;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
   color: #666666;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .rightPart:hover
-  h2 {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .rightPart:hover h2 {
   text-decoration: underline;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(-n + 5)
-  .rightPart:hover {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(-n+5) .rightPart:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 767px) {
@@ -802,32 +817,28 @@ menu .menuPages ul li:hover {
     flex-direction: column;
   }
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsbody
-  .dernieresNews:nth-child(n + 6) {
+.dernieresNewsBlockLeftPartMain .dernieresNewsbody .dernieresNews:nth-child(n+6) {
   display: none;
 }
 .dernieresNewsBlockLeftPartMain .dernieresNewsHeader {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
 }
-.dernieresNewsBlockLeftPartMain
-  .dernieresNewsHeader
-  .dernieresNewsHeaderContent {
-  border-left: 5px solid #f4f4f4;
+.dernieresNewsBlockLeftPartMain .dernieresNewsHeader .dernieresNewsHeaderContent {
+  border-left: 5px solid #F4F4F4;
   padding: 10px;
   font-size: 18px;
   font-weight: 700;
 }
 .dernieresNewsBlockLeftPartMain .dernieresNewsFooter {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   padding: 10px 20px;
   text-align: end;
   color: #333333;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -854,97 +865,69 @@ menu .menuPages ul li:hover {
   display: flex;
 }
 .dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .leftPart {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 35%;
   padding: 10px;
   margin-bottom: 2px;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsbody
-  .dernieresNews
-  .leftPart
-  img {
+.dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .leftPart img {
   width: 100%;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsbody
-  .dernieresNews
-  .leftPart:hover {
+.dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .leftPart:hover {
   cursor: pointer;
 }
 .dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .rightPart {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 65%;
   padding: 10px 0px;
   margin-bottom: 2px;
   color: #333333;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsbody
-  .dernieresNews
-  .rightPart
-  h2 {
+.dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .rightPart h2 {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #333333;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsbody
-  .dernieresNews
-  .rightPart
-  h3 {
+.dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .rightPart h3 {
   margin-top: 5px;
   font-weight: 300;
   font-size: 11px;
   line-height: 17px;
   color: #999999;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsbody
-  .dernieresNews
-  .rightPart
-  p {
+.dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .rightPart p {
   margin-top: 10px;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
   color: #666666;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsbody
-  .dernieresNews
-  .rightPart:hover
-  h2 {
+.dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .rightPart:hover h2 {
   text-decoration: underline;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsbody
-  .dernieresNews
-  .rightPart:hover {
+.dernieresNewsBlockRightPartMain .dernieresNewsbody .dernieresNews .rightPart:hover {
   cursor: pointer;
 }
 .dernieresNewsBlockRightPartMain .dernieresNewsHeader {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
 }
-.dernieresNewsBlockRightPartMain
-  .dernieresNewsHeader
-  .dernieresNewsHeaderContent {
-  border-left: 5px solid #f4f4f4;
+.dernieresNewsBlockRightPartMain .dernieresNewsHeader .dernieresNewsHeaderContent {
+  border-left: 5px solid #F4F4F4;
   padding: 10px;
   font-size: 18px;
   font-weight: 700;
 }
 .dernieresNewsBlockRightPartMain .dernieresNewsFooter {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   padding: 10px 20px;
   text-align: end;
   color: #333333;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
@@ -963,17 +946,15 @@ menu .menuPages ul li:hover {
   width: 100%;
 }
 .bientotDisponibleBlock .bientotDisponibleHeader {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
   margin-top: 10px;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleHeader
-  .bientotDisponibleHeaderContent {
-  border-left: 5px solid #f4f4f4;
+.bientotDisponibleBlock .bientotDisponibleHeader .bientotDisponibleHeaderContent {
+  border-left: 5px solid #F4F4F4;
   padding: 10px;
   font-size: 18px;
   font-weight: 700;
@@ -981,86 +962,54 @@ menu .menuPages ul li:hover {
 .bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard {
   display: flex;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .leftPart {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .leftPart {
   padding: 5px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 20%;
   margin-bottom: 4px;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .leftPart
-  img {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .leftPart img {
   width: 100%;
   border-radius: 5px;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .leftPart:hover {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .leftPart:hover {
   cursor: pointer;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .rightPart {
-  background-color: #ffffff;
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .rightPart {
+  background-color: #FFFFFF;
   width: 80%;
   padding: 5px;
   margin-bottom: 4px;
   color: #333333;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .rightPart
-  h2 {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .rightPart h2 {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: #333333;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .rightPart
-  h3 {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .rightPart h3 {
   margin-top: 5px;
   font-weight: 300;
   font-size: 11px;
   line-height: 17px;
   color: #999999;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .rightPart
-  p {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .rightPart p {
   margin-top: 10px;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
   color: #666666;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .rightPart:hover
-  h2 {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .rightPart:hover h2 {
   text-decoration: underline;
 }
-.bientotDisponibleBlock
-  .bientotDisponibleBody
-  .bientotDisponibleCard
-  .rightPart:hover {
+.bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .rightPart:hover {
   cursor: pointer;
 }
 .bientotDisponibleBlock .bientotDisponibleFooter {
-  color: #e60012;
+  color: #E60012;
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
@@ -1073,10 +1022,7 @@ menu .menuPages ul li:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 767px) {
-  .bientotDisponibleBlock
-    .bientotDisponibleBody
-    .bientotDisponibleCard
-    .leftPart {
+  .bientotDisponibleBlock .bientotDisponibleBody .bientotDisponibleCard .leftPart {
     width: 30%;
   }
 }
@@ -1085,15 +1031,15 @@ menu .menuPages ul li:hover {
   width: 100%;
 }
 .sortiesRecentesBlock .sortiesRecentesHeader {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   color: #333333;
   padding: 10px;
-  font-family: "font1", sans-serif;
+  font-family: "Open_sans", sans-serif;
   margin-bottom: 5px;
   margin-top: 10px;
 }
 .sortiesRecentesBlock .sortiesRecentesHeader .sortiesRecentesHeaderContent {
-  border-left: 5px solid #f4f4f4;
+  border-left: 5px solid #F4F4F4;
   padding: 10px;
   font-size: 18px;
   font-weight: 700;
@@ -1103,7 +1049,7 @@ menu .menuPages ul li:hover {
 }
 .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .leftPart {
   padding: 5px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 20%;
   margin-bottom: 4px;
 }
@@ -1111,14 +1057,11 @@ menu .menuPages ul li:hover {
   width: 100%;
   border-radius: 5px;
 }
-.sortiesRecentesBlock
-  .sortiesRecentesbody
-  .sortiesRecentesCard
-  .leftPart:hover {
+.sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .leftPart:hover {
   cursor: pointer;
 }
 .sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 80%;
   padding: 5px;
   margin-bottom: 4px;
@@ -1144,21 +1087,14 @@ menu .menuPages ul li:hover {
   line-height: 20px;
   color: #666666;
 }
-.sortiesRecentesBlock
-  .sortiesRecentesbody
-  .sortiesRecentesCard
-  .rightPart:hover
-  h2 {
+.sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart:hover h2 {
   text-decoration: underline;
 }
-.sortiesRecentesBlock
-  .sortiesRecentesbody
-  .sortiesRecentesCard
-  .rightPart:hover {
+.sortiesRecentesBlock .sortiesRecentesbody .sortiesRecentesCard .rightPart:hover {
   cursor: pointer;
 }
 .sortiesRecentesBlock .sortiesRecentesFooter {
-  color: #e60012;
+  color: #E60012;
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
@@ -1225,10 +1161,10 @@ footer .partager .buttonsContainer .buttonWhatsapp img {
   border-radius: 5px;
 }
 footer .partager .buttonsContainer .buttonFacebook {
-  background-color: #3b5998;
+  background-color: #3B5998;
 }
 footer .partager .buttonsContainer .buttonTwitter {
-  background-color: #55acee;
+  background-color: #55ACEE;
 }
 @media screen and (min-width: 767px) {
   footer .partager .buttonsContainer .buttonWhatsapp {
@@ -1270,13 +1206,13 @@ footer .footerChangeCountry {
 }
 footer .footerChangeCountryActive {
   height: auto;
-  background-color: #99000d;
+  background-color: #99000D;
   padding: 20px;
 }
 footer .footerChangeCountryActive p {
   padding: 15px;
   font-size: 2rem;
-  border-bottom: 1px solid #c4000f;
+  border-bottom: 1px solid #C4000F;
 }
 footer .footerChangeCountryActive .paysContainer {
   padding: 30px;
@@ -1305,7 +1241,7 @@ footer .footerBanner {
   padding-left: 5px;
 }
 footer .footerBanner .footerHeader {
-  background-color: #e60012;
+  background-color: #E60012;
   border-radius: 5px 5px 0 0px;
   padding: 10px 20px;
   display: flex;
@@ -1318,7 +1254,7 @@ footer .footerBanner .footerHeader .btnFooterHeader {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: #bf0010;
+  background-color: #BF0010;
   padding: 10px;
   border-radius: 5px;
 }
@@ -1334,7 +1270,7 @@ footer .footerBanner .footerHeader .btnFooterHeaderActive {
   align-items: center;
   gap: 10px;
   text-align: center;
-  background-color: #99000d;
+  background-color: #99000D;
   padding: 10px;
   border-radius: 5px;
 }
@@ -1357,13 +1293,13 @@ footer .footerBanner .footerHeader .btnFooterHeaderActive:hover {
 footer .footerBanner .footerHeader .btnFooterHeaderActive::after {
   content: "";
   position: absolute;
-  background-color: #99000d;
+  background-color: #99000D;
   width: 100%;
   height: 20px;
   top: 30px;
 }
 footer .footerBanner .footerBody {
-  background-color: #bf0010;
+  background-color: #BF0010;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -1391,4 +1327,4 @@ footer .footerBanner .footerBody > div {
     margin-left: 0;
     margin-right: 5px;
   }
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
