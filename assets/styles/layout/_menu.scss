@@ -32,45 +32,48 @@ menu {
 
     }
 
-    @media screen and (max-height: 860px) {
-        > :nth-child(7) {
-            display: none;
-        }
-    }
+    @media screen and (min-width: 767px) {
 
-    @media screen and (max-height: 770px) {
-        > :nth-child(6) {
-            display: none;
+        @media screen and (max-height: 860px) {
+            > :nth-child(7) {
+                display: none;
+            }
         }
-    }
 
-    @media screen and (max-height: 685px) {
-        > :nth-child(5) {
-            display: none;
+        @media screen and (max-height: 770px) {
+            > :nth-child(6) {
+                display: none;
+            }
         }
-    }
 
-    @media screen and (max-height: 595px) {
-        > :nth-child(4) {
-            display: none;
+        @media screen and (max-height: 685px) {
+            > :nth-child(5) {
+                display: none;
+            }
         }
-    }
 
-    @media screen and (max-height: 508px) {
-        > :nth-child(3) {
-            display: none;
+        @media screen and (max-height: 595px) {
+            > :nth-child(4) {
+                display: none;
+            }
         }
-    }
 
-    @media screen and (max-height: 420px) {
-        > :nth-child(2) {
-            display: none;
+        @media screen and (max-height: 508px) {
+            > :nth-child(3) {
+                display: none;
+            }
         }
-    }
 
-    @media screen and (max-height: 330px) {
-        > :nth-child(1) {
-            display: none;
+        @media screen and (max-height: 420px) {
+            > :nth-child(2) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-height: 330px) {
+            > :nth-child(1) {
+                display: none;
+            }
         }
     }
 
@@ -128,6 +131,16 @@ menu {
         justify-content: center;
         grid-column-gap: 10px;
         grid-row-gap: 10px;
+
+        @media screen and (max-width: 500px) {
+            grid-template-columns: repeat(3, 88px);
+            grid-template-rows: repeat(3, 106px);
+        }
+
+        @media screen and (max-width: 330px) {
+            grid-template-columns: repeat(2, 88px);
+            grid-template-rows: repeat(6, 106px);
+        }
 
         &>li {
             height: 106px;

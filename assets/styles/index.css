@@ -319,37 +319,37 @@ menu > :nth-child(9) {
   font-size: 2rem;
   padding-bottom: 20px;
 }
-@media screen and (max-height: 860px) {
+@media screen and (min-width: 767px) and (max-height: 860px) {
   menu > :nth-child(7) {
     display: none;
   }
 }
-@media screen and (max-height: 770px) {
+@media screen and (min-width: 767px) and (max-height: 770px) {
   menu > :nth-child(6) {
     display: none;
   }
 }
-@media screen and (max-height: 685px) {
+@media screen and (min-width: 767px) and (max-height: 685px) {
   menu > :nth-child(5) {
     display: none;
   }
 }
-@media screen and (max-height: 595px) {
+@media screen and (min-width: 767px) and (max-height: 595px) {
   menu > :nth-child(4) {
     display: none;
   }
 }
-@media screen and (max-height: 508px) {
+@media screen and (min-width: 767px) and (max-height: 508px) {
   menu > :nth-child(3) {
     display: none;
   }
 }
-@media screen and (max-height: 420px) {
+@media screen and (min-width: 767px) and (max-height: 420px) {
   menu > :nth-child(2) {
     display: none;
   }
 }
-@media screen and (max-height: 330px) {
+@media screen and (min-width: 767px) and (max-height: 330px) {
   menu > :nth-child(1) {
     display: none;
   }
@@ -408,6 +408,20 @@ menu li:hover {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  menu {
+    grid-template-columns: repeat(3, 88px);
+    grid-template-rows: repeat(3, 106px);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 330px) {
+  menu {
+    grid-template-columns: repeat(2, 88px);
+    grid-template-rows: repeat(6, 106px);
+  }
+}
+@media screen and (max-width: 767px) {
   menu > li {
     height: 106px;
     border-radius: 5px;
@@ -420,9 +434,13 @@ menu li:hover {
     top: -1px;
     right: -1px;
   }
+}
+@media screen and (max-width: 767px) {
   menu > :nth-child(9) {
     height: auto;
   }
+}
+@media screen and (max-width: 767px) {
   menu .callbackTop {
     display: none;
   }
